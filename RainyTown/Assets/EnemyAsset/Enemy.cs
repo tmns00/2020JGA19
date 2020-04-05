@@ -7,8 +7,9 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
-    public float moveSpeed;
+    public float moveSpeed = 5.0f;
     private Vector3 velocity;
+    private Vector3 vec;
 
     [SerializeField]
     private GameObject searceObject;
@@ -25,14 +26,13 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        moveSpeed = 0.2f;
+        //moveSpeed = 3.0f;
     }
 
     // Update is called once per frame
     void Update()
-    {
-        transform.Translate(
-            new Vector3(velocity.x, 0, velocity.z) * moveSpeed * Time.deltaTime);
+    { 
+        vec = player.transform.position - transform.position;
 
         if (searce.GetTrackFlag() && player != null)
             Tracking();
@@ -44,7 +44,21 @@ public class Enemy : MonoBehaviour
 
     private void Tracking()
     {
-        Vector3 vec = player.transform.position - transform.position;
-        velocity = vec.normalized;
+        Ray ray = new Ray(transform.position, player.transform.position);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider.tag == "Player" || hit.collider.tag == "Wall")
+            {
+                velocity = vec.normalized;
+                transform.Translate(
+                    new Vector3(velocity.x, 0, velocity.z) * moveSpeed * Time.deltaTime);
+            }
+
+            Debug.Log(hit.collider.tag);
+            return;
+        }
+
     }
 }

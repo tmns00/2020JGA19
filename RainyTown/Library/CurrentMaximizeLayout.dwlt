@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 3871
+  controlID: 2924
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 3833
+  controlID: 2885
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 3811
+  controlID: 2856
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,21 +212,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5ef4fffffef7ffffccfaffffd4fbffff
+      m_ExpandedIDs: d4fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Plane
-        m_OriginalName: Plane
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 11088
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -325,13 +325,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.14434594, y: 0.7880197, z: -0.20189549, w: -0.56340706}
+    m_Target: {x: -0.104299754, y: 0.8850026, z: -0.23951925, w: -0.38538614}
     speed: 2
-    m_Value: {x: -0.14434594, y: 0.7880197, z: -0.20189549, w: -0.56340706}
+    m_Value: {x: -0.104299754, y: 0.8850026, z: -0.23951925, w: -0.38538614}
   m_Size:
-    m_Target: 8.345377
+    m_Target: 13.543321
     speed: 2
-    m_Value: 8.345377
+    m_Value: 13.543321
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -388,8 +388,8 @@ MonoBehaviour:
     y: 457
     width: 1259
     height: 274
-  m_MinSize: {x: 232, y: 274}
-  m_MaxSize: {x: 10002, y: 10024}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -434,20 +434,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/ItemAsset
+    - Assets/EnemyAsset
   m_ViewMode: 1
   m_StartGridSize: 87
   m_LastFolders:
-  - Assets/ItemAsset
+  - Assets/EnemyAsset
   m_LastFoldersGridSize: 87
   m_LastProjectPath: D:\2020JGA19\RainyTown
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f62d0000
-    m_LastClickedID: 11766
-    m_ExpandedIDs: 000000000626000000ca9a3b
+    m_SelectedIDs: 08270000
+    m_LastClickedID: 9992
+    m_ExpandedIDs: 000000000e26000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -475,7 +475,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000626000000ca9a3b
+    m_ExpandedIDs: 000000000e26000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -500,9 +500,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f62d0000
-    m_LastClickedInstanceID: 11766
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: d2fbffff
+    m_LastClickedInstanceID: -1070
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000303000007c280000a6270000322d0000f0290000b48d0000f89b0100fcf80100922e00005c52000030350000fa360000882b000006df010008df010002df0100ca34000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
