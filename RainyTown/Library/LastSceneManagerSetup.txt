@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/EnemySample.unity
+- path: Assets/Scenes/ItemSample.unity
   isLoaded: 1
   isActive: 1

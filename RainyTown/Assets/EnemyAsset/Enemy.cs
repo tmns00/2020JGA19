@@ -10,7 +10,9 @@ public class Enemy : MonoBehaviour
     public float moveSpeed;
     private Vector3 velocity;
 
+    [SerializeField]
     private GameObject searceObject;
+    [SerializeField]
     private searceSystem searce;
 
     // Start is called before the first frame update
@@ -30,14 +32,14 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         transform.Translate(
-            moveSpeed * velocity.x, 0, moveSpeed * velocity.z);
+            new Vector3(velocity.x, 0, velocity.z) * moveSpeed * Time.deltaTime);
 
-        if (searce.GetTrackFlag())
+        if (searce.GetTrackFlag() && player != null)
             Tracking();
         else
             velocity = Vector3.zero;
 
-        Debug.Log(searce.GetTrackFlag());
+        //Debug.Log(searce.GetTrackFlag());
     }
 
     private void Tracking()
