@@ -9,7 +9,7 @@ public class sampleRainManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rainLevel =5;
+       // rainLevel =5;
     }
 
     // Update is called once per frame

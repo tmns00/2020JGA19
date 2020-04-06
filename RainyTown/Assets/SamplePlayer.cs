@@ -5,7 +5,7 @@ using UnityEngine;
 public class SamplePlayer : MonoBehaviour
 {
     //private Vector3 velocity;
-    public float moveSpeeed = 0.2f;
+    public float moveSpeeed = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -14,7 +14,7 @@ public class SamplePlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
