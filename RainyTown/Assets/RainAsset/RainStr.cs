@@ -76,6 +76,6 @@ public class RainStr : MonoBehaviour
                
                 break;
         }
-        Debug.Log(sampleRainManager.rainLevel);
+        Debug.Log(RainManager.rainLevel);
     }
 }

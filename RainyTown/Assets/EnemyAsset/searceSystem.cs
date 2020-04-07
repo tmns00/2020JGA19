@@ -27,13 +27,13 @@ public class searceSystem : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Untagged")
-            return;
+        //if (other.gameObject.tag == "Untagged")
+        //    return;
 
         if (other.gameObject.tag == "Player")
             isTracking = true;
-        else
-            isTracking = false;
+        //else
+        //    isTracking = false;
     }
 
     private void OnTriggerExit(Collider other)

@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
     { 
         vec = player.transform.position - transform.position;
 
-        if (searce.GetTrackFlag() && player != null)
+        if (searce.GetTrackFlag()/* && player != null*/)
             Tracking();
         else
             velocity = Vector3.zero;
@@ -55,8 +55,12 @@ public class Enemy : MonoBehaviour
                 transform.Translate(
                     new Vector3(velocity.x, 0, velocity.z) * moveSpeed * Time.deltaTime);
             }
+            else if (hit.collider.tag=="RestPoint")
+            {
+                transform.Translate(Vector3.zero);
+            }
 
-            Debug.Log(hit.collider.tag);
+            //Debug.Log(hit.collider.tag);
             return;
         }
 
