@@ -28,7 +28,7 @@ public class RainStr : MonoBehaviour
         if (istime >= 5)
         {
             number = Random.Range(0, 5);
-            sampleRainManager.rainLevel = number+1;
+            RainManager.rainLevel = number+1;
         }
 
         switch (number)
