@@ -8436,7 +8436,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 272
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -9714,6 +9714,16 @@ PrefabInstance:
       propertyPath: SubModule.subEmitters.Array.data[0].emitter
       value: 
       objectReference: {fileID: 4255916032875875465}
+    - target: {fileID: 2821503730724669928, guid: 814b883e7851f2e46bf3aa5bd71f7c01,
+        type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821503730724669928, guid: 814b883e7851f2e46bf3aa5bd71f7c01,
+        type: 3}
+      propertyPath: SubModule.subEmitters.Array.data[0].type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814b883e7851f2e46bf3aa5bd71f7c01, type: 3}
 --- !u!4 &990150714958381118 stripped

@@ -25,11 +25,12 @@ public class RainStr : MonoBehaviour
     {
         
         istime += 1 / 60f;
-        if (istime >= 5)
+        if (istime >= 8)
         {
             number = Random.Range(0, 5);
             //number = 4;
             sampleRainManager.rainLevel = number+1;
+            Debug.Log(sampleRainManager.rainLevel);
         }
 
         switch (number)
@@ -40,7 +41,7 @@ public class RainStr : MonoBehaviour
             case 1:
 
                 var instantiateEffect = GameObject.Instantiate(effectobj[1]);
-                if (istime >= 5)
+                if (istime >= 8)
                 {
                     Destroy(instantiateEffect, 3);
                     istime = 0;                  
@@ -50,7 +51,7 @@ public class RainStr : MonoBehaviour
                 break;
             case 2:
                 instantiateEffect = GameObject.Instantiate(effectobj[2]);
-                if (istime >= 5)
+                if (istime >= 8)
                 {
                     Destroy(instantiateEffect, 3);                    
                     istime = 0;
@@ -59,7 +60,7 @@ public class RainStr : MonoBehaviour
                 break;
             case 3:
                 instantiateEffect = GameObject.Instantiate(effectobj[3]);
-                if (istime >= 5)
+                if (istime >= 8)
                 {
                     Destroy(instantiateEffect, 3);                   
                     istime = 0;
@@ -68,7 +69,7 @@ public class RainStr : MonoBehaviour
                 break;     
             case 4:
                 instantiateEffect = GameObject.Instantiate(effectobj[4]);
-                if (istime >= 5)
+                if (istime >= 8)
                 {
                     Destroy(instantiateEffect, 3);                   
                     istime = 0;
@@ -77,6 +78,6 @@ public class RainStr : MonoBehaviour
                
                 break;
         }
-        Debug.Log(sampleRainManager.rainLevel);
+        
     }
 }
