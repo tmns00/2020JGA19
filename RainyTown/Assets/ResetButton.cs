@@ -16,7 +16,7 @@ public class ResetButton : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene("ItemSample");
+            SceneManager.LoadScene("SampleMap");
         }
     }
 }
