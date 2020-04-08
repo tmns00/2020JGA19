@@ -21,4 +21,10 @@ public class SampleDelete : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
             Destroy(gameObject);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+            Destroy(gameObject);
+    }
 }
