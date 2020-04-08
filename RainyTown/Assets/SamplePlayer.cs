@@ -7,7 +7,7 @@ public class SamplePlayer : MonoBehaviour
     //private Vector3 velocity;
     public float moveSpeeed = 2f;
 
-    private Vector3 position = new Vector3();
+    //private Vector3 position = new Vector3();
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +27,6 @@ public class SamplePlayer : MonoBehaviour
 
     public Vector3 playerPosition()
     {
-        return position;
+        return transform.position;
     }
 }

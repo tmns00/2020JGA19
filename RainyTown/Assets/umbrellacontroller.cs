@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class umbrellacontroller : MonoBehaviour
 {
-    public sampleRainManager rain;
+    public RainManager rain;
     public SamplePlayer playercontroller;
     AudioSource audioSource;
 
@@ -16,7 +16,7 @@ public class umbrellacontroller : MonoBehaviour
     void Start()
     {
         umbrellatrigger = true;
-        raincount = rain.GetLevel();
+        raincount = RainManager.rainLevel;
         audioSource = GetComponent<AudioSource>();
         audioSource.Play();
     }
@@ -42,5 +42,7 @@ public class umbrellacontroller : MonoBehaviour
         }
 
         transform.position = playercontroller.playerPosition();
+
+        //Debug.Log(umbrellatrigger);
     }
 }
