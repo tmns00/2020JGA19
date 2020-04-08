@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.tag == "Player" || hit.collider.tag == "Wall")
+            if (hit.collider.tag == "Player" || hit.collider.tag == "Wall" || hit.collider.tag == "Untagged")
             {
                 velocity = vec.normalized;
                 transform.Translate(
