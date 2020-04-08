@@ -39,17 +39,21 @@ public class Enemy : MonoBehaviour
         else
             velocity = Vector3.zero;
 
-        //Debug.Log(searce.GetTrackFlag());
+        Debug.Log(searce.GetTrackFlag());
+        //Debug.Log(player.transform.position);
+        //Debug.Log(transform.position);
     }
 
     private void Tracking()
     {
-        Ray ray = new Ray(transform.position, player.transform.position);
+        Ray ray = new Ray(transform.position, (player.transform.position - transform.position));
         RaycastHit hit;
+
+        Debug.DrawRay(transform.position, ray.direction * 10, Color.red, 10);
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.tag == "Player" || hit.collider.tag == "Wall" || hit.collider.tag == "Untagged")
+            if (hit.collider.tag == "Player" || hit.collider.tag == "Wall" || hit.collider.tag == "Untagged" || hit.collider.tag == "Item")
             {
                 velocity = vec.normalized;
                 transform.Translate(
@@ -60,9 +64,8 @@ public class Enemy : MonoBehaviour
                 transform.Translate(Vector3.zero);
             }
 
-            //Debug.Log(hit.collider.tag);
+            Debug.Log(hit.collider.tag);
             return;
-        }
-
+        }       
     }
 }

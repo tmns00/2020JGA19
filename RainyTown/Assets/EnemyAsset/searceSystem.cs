@@ -25,6 +25,12 @@ public class searceSystem : MonoBehaviour
         searce.radius = 2 + RainManager.rainLevel * 1.0f;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+            isTracking = true;
+    }
+
     private void OnTriggerStay(Collider other)
     {
         //if (other.gameObject.tag == "Untagged")
