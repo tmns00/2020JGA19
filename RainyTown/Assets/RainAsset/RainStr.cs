@@ -10,8 +10,10 @@ public class RainStr : MonoBehaviour
     private List<ParticleSystem> effectobj;
     //時間
     float istime = 0;
-    int number=0;
-   
+    public static float nextrain=0;
+    float number=0;
+    bool israin=true;
+    float rnd;
     void Start()
     {
        
@@ -25,57 +27,72 @@ public class RainStr : MonoBehaviour
     {
         
         istime += 1 / 60f;
-        if (istime >= 5)
+        if (israin)
         {
-            number = Random.Range(0, 5);
-            RainManager.rainLevel = number+1;
+            if (istime >= 3)
+            {
+                rnd = Random.Range(1, 4);
+                nextrain = rnd;
+                israin = false;
+            }
         }
-
+        if(istime>=5)
+        {
+            number = rnd;
+            RainManager.rainLevel = number ;
+            nextrain = 4;
+        }
         switch (number)
         {
-            case 0:
-             
-                break;
             case 1:
+                if (istime >= 5)
+                {
+                    israin = true;
+                    istime = 0;
+                }
+                break;
+            case 2:
 
                 var instantiateEffect = GameObject.Instantiate(effectobj[1]);
                 if (istime >= 5)
                 {
                     Destroy(instantiateEffect, 3);
+                    israin = true;
                     istime = 0;                  
                 }
 
 
                 break;
-            case 2:
+            case 3:
                 instantiateEffect = GameObject.Instantiate(effectobj[2]);
                 if (istime >= 5)
                 {
-                    Destroy(instantiateEffect, 3);                    
+                    Destroy(instantiateEffect, 3);
+                    israin = true;
                     istime = 0;
                     
                 }
                 break;
-            case 3:
-                instantiateEffect = GameObject.Instantiate(effectobj[3]);
-                if (istime >= 5)
-                {
-                    Destroy(instantiateEffect, 3);                   
-                    istime = 0;
+            //case 3:
+            //    instantiateEffect = GameObject.Instantiate(effectobj[3]);
+            //    if (istime >= 5)
+            //    {
+            //        Destroy(instantiateEffect, 3);                   
+            //        istime = 0;
                     
-                }
-                break;     
-            case 4:
-                instantiateEffect = GameObject.Instantiate(effectobj[4]);
-                if (istime >= 5)
-                {
-                    Destroy(instantiateEffect, 3);                   
-                    istime = 0;
+            //    }
+            //    break;     
+            //case 4:
+            //    instantiateEffect = GameObject.Instantiate(effectobj[4]);
+            //    if (istime >= 5)
+            //    {
+            //        Destroy(instantiateEffect, 3);                   
+            //        istime = 0;
                    
-                }
+            //    }
                
-                break;
+                //break;
         }
-        Debug.Log(RainManager.rainLevel);
+        Debug.Log(number);
     }
 }

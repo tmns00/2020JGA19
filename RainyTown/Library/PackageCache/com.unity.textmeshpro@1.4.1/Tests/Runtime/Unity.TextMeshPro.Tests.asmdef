@@ -1,11 +1,14 @@
 {
     "name": "Unity.TextMeshPro.Tests",
-    "references": [
-        "Unity.TextMeshPro"
-    ],
+    "references": [],
     "optionalUnityReferences": [
         "TestAssemblies"
     ],
     "includePlatforms": [],
-    "excludePlatforms": []
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
 }
