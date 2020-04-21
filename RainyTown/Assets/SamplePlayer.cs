@@ -29,4 +29,31 @@ public class SamplePlayer : MonoBehaviour
     {
         return transform.position;
     }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "Muddy")
+        {
+            if (RainManager.rainLevel == 2)
+            {
+                moveSpeeed = 5f;
+            }
+            else if (RainManager.rainLevel == 3)
+            {
+                moveSpeeed = 0.5f;
+            }
+            else
+            {
+                moveSpeeed = 10f;
+            }
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Muddy")
+        {
+            moveSpeeed = 10f;
+        }
+    }
 }
