@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeeed: 10
+  wind: {fileID: 531045678049885609, guid: 67a3d250c4f57ce428a7bb164c74f611, type: 3}
 --- !u!1 &8749084756357900024
 GameObject:
   m_ObjectHideFlags: 0
