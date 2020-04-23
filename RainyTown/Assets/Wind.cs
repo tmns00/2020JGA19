@@ -7,6 +7,7 @@ public class Wind : MonoBehaviour
     int rnd=4;
     bool iswind = true;
     public Vector3 WindSpeed;
+    public int windvec;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class Wind : MonoBehaviour
             iswind = true;
             rnd = 4;
         }
+        windvec = rnd;
         switch (rnd)
         {
             case 0:
