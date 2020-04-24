@@ -260,3 +260,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   moveSpeed: 0
+  searceObject: {fileID: 4433171110473208288}
+  searce: {fileID: 0}

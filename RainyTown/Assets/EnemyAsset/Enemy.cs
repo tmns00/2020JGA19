@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        searceObject = GameObject.Find("SearceObject");
+        //searceObject = GameObject.Find("SearceObject");
         searce = searceObject.GetComponent<searceSystem>();       
     }
 

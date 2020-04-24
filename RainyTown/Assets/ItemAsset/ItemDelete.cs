@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ItemDelete : MonoBehaviour
 {
-    [SerializeField]
     private ItemManager itemManager;
 
     // Start is called before the first frame update
