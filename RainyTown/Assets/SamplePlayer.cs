@@ -7,13 +7,14 @@ public class SamplePlayer : MonoBehaviour
     //private Vector3 velocity;
     public float moveSpeeed = 2f;
     bool isBoots;
-
+    public Wind wind;
     //private Vector3 position = new Vector3();
 
     // Start is called before the first frame update
     void Start()
     {
         isBoots = false;
+        wind = wind.GetComponent<Wind>();
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class SamplePlayer : MonoBehaviour
         float v = Input.GetAxis("Vertical");
 
         transform.Translate(
-            new Vector3(h, 0, v) * moveSpeeed * Time.deltaTime);
+            new Vector3(h, 0, v) * moveSpeeed * Time.deltaTime-wind.WindSpeed);
 
         //長靴を取得した時、水たまりを通れるように変更
         if(isBoots==true)
