@@ -6,13 +6,14 @@ public class SamplePlayer : MonoBehaviour
 {
     //private Vector3 velocity;
     public float moveSpeeed = 2f;
+    bool isBoots;
 
     //private Vector3 position = new Vector3();
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        isBoots = false;
     }
 
     // Update is called once per frame
@@ -23,6 +24,14 @@ public class SamplePlayer : MonoBehaviour
 
         transform.Translate(
             new Vector3(h, 0, v) * moveSpeeed * Time.deltaTime);
+
+        //長靴を取得した時、水たまりを通れるように変更
+        if(isBoots==true)
+        {
+            int playerCol = LayerMask.NameToLayer("Player");
+            int waterCol = LayerMask.NameToLayer("Water");
+            Physics.IgnoreLayerCollision(playerCol, waterCol);
+        }
     }
 
     public Vector3 playerPosition()
@@ -46,6 +55,15 @@ public class SamplePlayer : MonoBehaviour
             {
                 moveSpeeed = 10f;
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider col)
+    {
+        //長靴を取得
+        if(col.gameObject.tag=="Boots")
+        {
+            isBoots = true;
         }
     }
 
