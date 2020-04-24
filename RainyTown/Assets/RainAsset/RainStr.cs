@@ -36,7 +36,7 @@ public class RainStr : MonoBehaviour
                 israin = false;
             }
         }
-        if(istime>=5)
+        if(istime>=8)
         {
             number = rnd;
             RainManager.rainLevel = number ;
@@ -45,7 +45,7 @@ public class RainStr : MonoBehaviour
         switch (number)
         {
             case 1:
-                if (istime >= 5)
+                if (istime >= 8)
                 {
                     israin = true;
                     istime = 0;
@@ -54,7 +54,7 @@ public class RainStr : MonoBehaviour
             case 2:
 
                 var instantiateEffect = GameObject.Instantiate(effectobj[1]);
-                if (istime >= 5)
+                if (istime >= 8)
                 {
                     Destroy(instantiateEffect, 3);
                     israin = true;
@@ -65,7 +65,7 @@ public class RainStr : MonoBehaviour
                 break;
             case 3:
                 instantiateEffect = GameObject.Instantiate(effectobj[2]);
-                if (istime >= 5)
+                if (istime >= 8)
                 {
                     Destroy(instantiateEffect, 3);
                     israin = true;
