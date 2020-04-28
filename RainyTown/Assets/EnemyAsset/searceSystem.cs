@@ -44,7 +44,8 @@ public class searceSystem : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        isTracking = false;
+        if (other.gameObject.tag == "Player")
+            isTracking = false;
     }
 
     public bool GetTrackFlag()
