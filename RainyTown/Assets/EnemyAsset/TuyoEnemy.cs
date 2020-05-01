@@ -19,8 +19,7 @@ public class TuyoEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        search = searchObject.GetComponent<TuyoSearchSystem>();
+        
     }
 
     private void Awake()
@@ -31,6 +30,12 @@ public class TuyoEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(player==null || search==null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            search = searchObject.GetComponent<TuyoSearchSystem>();
+        }
+
         vec = player.transform.position - transform.position;
 
         if (search.GetTrackFlag())
