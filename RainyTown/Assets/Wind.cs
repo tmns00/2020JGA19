@@ -5,7 +5,7 @@ using UnityEngine;
 public class Wind : MonoBehaviour
 {
     int rnd=4;
-    bool iswind = true;
+    public bool iswind = true;
     public Vector3 WindSpeed;
     public int windvec;
     // Start is called before the first frame update

@@ -10,6 +10,7 @@ TagManager:
   - RestPoint
   - Muddy
   - Boots
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX

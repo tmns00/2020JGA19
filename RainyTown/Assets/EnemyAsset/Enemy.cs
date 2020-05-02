@@ -16,12 +16,14 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private searceSystem searce;
 
+    public SamplePlayer sampleplayer;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         //searceObject = GameObject.Find("SearceObject");
-        searce = searceObject.GetComponent<searceSystem>();       
+        searce = searceObject.GetComponent<searceSystem>();
+        sampleplayer = sampleplayer.GetComponent<SamplePlayer>();
     }
 
     private void Awake()
@@ -30,8 +32,8 @@ public class Enemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    { 
+    void FixedUpdate()
+    {
         vec = player.transform.position - transform.position;
 
         if (searce.GetTrackFlag()/* && player != null*/)
@@ -40,10 +42,18 @@ public class Enemy : MonoBehaviour
             velocity = Vector3.zero;
 
         Debug.Log(searce.GetTrackFlag());
+      
         //Debug.Log(player.transform.position);
         //Debug.Log(transform.position);
     }
-
+    void Die()
+    {
+        if (sampleplayer.isHitAttack)
+        {
+            Debug.Log("aaa");
+            Destroy(gameObject);
+        }
+    }
     private void Tracking()
     {
         Ray ray = new Ray(transform.position, (player.transform.position - transform.position));
@@ -59,13 +69,20 @@ public class Enemy : MonoBehaviour
                 transform.Translate(
                     new Vector3(velocity.x, 0, velocity.z) * moveSpeed * Time.deltaTime);
             }
-            else if (hit.collider.tag=="RestPoint")
+            else if (hit.collider.tag == "RestPoint")
             {
                 transform.Translate(Vector3.zero);
             }
 
             Debug.Log(hit.collider.tag);
             return;
-        }       
+        }
+    }
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "PlayerAttack")
+        {
+            Die();
+        }
     }
 }

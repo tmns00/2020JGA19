@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4018741489835901426}
+  - component: {fileID: 3794546771338590026}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -32,6 +33,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3794546771338590026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3178917150785855635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1954369d8c07dcc49916196956d063b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeeed: 2
+  isAttack: 0
+  isHitAttack: 0
+  wind: {fileID: 0}
+  Attackgage: {fileID: 0}
+  obj: {fileID: 0}
 --- !u!1 &8749084756300650774
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,13 +180,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8749084756300650774}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1954369d8c07dcc49916196956d063b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeeed: 10
+  isAttack: 0
+  isHitAttack: 0
   wind: {fileID: 531045678049885609, guid: 67a3d250c4f57ce428a7bb164c74f611, type: 3}
+  Attackgage: {fileID: 0}
+  obj: {fileID: 0}
 --- !u!1 &8749084756357900024
 GameObject:
   m_ObjectHideFlags: 0
