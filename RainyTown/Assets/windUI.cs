@@ -17,6 +17,7 @@ public class windUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("wind" + wind.iswind);
         if (wind.windvec == 0)
         {
             sprite = Resources.Load<Sprite>("wind (2)");
