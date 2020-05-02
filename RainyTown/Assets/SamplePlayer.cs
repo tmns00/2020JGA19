@@ -13,7 +13,7 @@ public class SamplePlayer : MonoBehaviour
     public Wind wind;
     public attackgage Attackgage;
     public Transform parent;
-
+    public float STR=1;
     //private Vector3 position = new Vector3();
 
     // Start is called before the first frame update
