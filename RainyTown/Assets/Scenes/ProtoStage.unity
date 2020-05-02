@@ -263,7 +263,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 1488696381}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &8660052
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -534,7 +534,7 @@ PrefabInstance:
     - target: {fileID: 1518451703, guid: b5fcfbd61884cff4cb65c64b05a463e0, type: 3}
       propertyPath: sampleplayer
       value: 
-      objectReference: {fileID: 1948982525}
+      objectReference: {fileID: 1451295799}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5fcfbd61884cff4cb65c64b05a463e0, type: 3}
 --- !u!1 &61592705
@@ -687,7 +687,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 761193042}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &97368044
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1152,7 +1152,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 185873210}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &146233471
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1399,16 +1399,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 995481701}
     m_Modifications:
-    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
-        type: 3}
-      propertyPath: m_Name
-      value: Puddle (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
-        type: 3}
-      propertyPath: m_Layer
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 2911929479851492209, guid: cd521532f7c93594987d81a1ded3de67,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1468,6 +1458,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.3333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_Name
+      value: Puddle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -2030,7 +2030,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 647390734}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &285459358
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2305,7 +2305,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 1956869864}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &372870501
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2695,7 +2695,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 392502122}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &401632966
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4010,7 +4010,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 1514644996}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &695160239
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4635,7 +4635,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 659566667}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &862346198
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4852,7 +4852,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 14291190}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &923755454
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5104,7 +5104,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 1219047296}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &1017115666
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5497,7 +5497,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 2108475543}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &1069003984
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5585,7 +5585,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 1519426287}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &1136192677
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6003,16 +6003,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 995481701}
     m_Modifications:
-    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
-        type: 3}
-      propertyPath: m_Name
-      value: Puddle (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
-        type: 3}
-      propertyPath: m_Layer
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 2911929479851492209, guid: cd521532f7c93594987d81a1ded3de67,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6078,6 +6068,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_Name
+      value: Puddle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!1 &1180563857
@@ -6116,7 +6116,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 183461122}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &1180563859
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6145,6 +6145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1141306427, guid: a4f8bea52adfe17498be294d20007faa, type: 3}
+      propertyPath: sampleplayer
+      value: 
+      objectReference: {fileID: 1948982525}
     - target: {fileID: 1141306429, guid: a4f8bea52adfe17498be294d20007faa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.042305
@@ -6189,10 +6193,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1141306427, guid: a4f8bea52adfe17498be294d20007faa, type: 3}
-      propertyPath: sampleplayer
-      value: 
-      objectReference: {fileID: 1948982525}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4f8bea52adfe17498be294d20007faa, type: 3}
 --- !u!114 &1207028392 stripped
@@ -7243,7 +7243,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 343099584}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &1357011500
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7623,6 +7623,18 @@ PrefabInstance:
       objectReference: {fileID: 100950172}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbc72085efd39d843824ee06a8f065be, type: 3}
+--- !u!114 &1451295799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3794546771338590026, guid: cbc72085efd39d843824ee06a8f065be,
+    type: 3}
+  m_PrefabInstance: {fileID: 1451295798}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1954369d8c07dcc49916196956d063b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1451912803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6792642609804516847, guid: 97a3d0d12a7153b47a787bf69fd612ea,
@@ -7744,7 +7756,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 1030507399}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &1469132239
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8385,7 +8397,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 113296972}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &1559902701
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8815,16 +8827,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
-        type: 3}
-      propertyPath: m_Name
-      value: Puddle
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
-        type: 3}
-      propertyPath: m_Layer
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 2911929479851492209, guid: cd521532f7c93594987d81a1ded3de67,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8884,6 +8886,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_Name
+      value: Puddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -8959,7 +8971,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 384626365}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &1649277037
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9133,7 +9145,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 1334868921}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &1752793772
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9429,7 +9441,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 1384572387}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &1818679250
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10538,16 +10550,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 995481701}
     m_Modifications:
-    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
-        type: 3}
-      propertyPath: m_Name
-      value: Puddle (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
-        type: 3}
-      propertyPath: m_Layer
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 2911929479851492209, guid: cd521532f7c93594987d81a1ded3de67,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10607,6 +10609,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.3333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_Name
+      value: Puddle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -10730,7 +10742,7 @@ MonoBehaviour:
   moveSpeed: 5
   searceObject: {fileID: 229125772}
   searce: {fileID: 0}
-  sampleplayer: {fileID: 1948982525}
+  sampleplayer: {fileID: 1451295799}
 --- !u!54 &1975933793
 Rigidbody:
   m_ObjectHideFlags: 0
