@@ -16,14 +16,19 @@ public class SamplePlayer : MonoBehaviour
     public float STR=1;
     //private Vector3 position = new Vector3();
 
+    private int remains;
+
     // Start is called before the first frame update
     void Start()
     {
         isBoots = false;
         wind = wind.GetComponent<Wind>();
         Attackgage = Attackgage.GetComponent<attackgage>();
-      
+    }
 
+    private void Awake()
+    {
+        remains = 3;
     }
 
     // Update is called once per frame
@@ -70,6 +75,14 @@ public class SamplePlayer : MonoBehaviour
         }
     }
 
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Muddy")
+        {
+            moveSpeeed = 10f;
+        }
+    }
+
     private void OnTriggerEnter(Collider col)
     {
         //長靴を取得
@@ -103,11 +116,5 @@ public class SamplePlayer : MonoBehaviour
         
         }
     }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Muddy")
-        {
-            moveSpeeed = 10f;
-        }
-    }
+    
 }
