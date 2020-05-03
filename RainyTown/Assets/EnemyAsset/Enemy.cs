@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour
 
     public SamplePlayer sampleplayer;
 
-    private float HP = 10.0f;
+    private float HP = 15.0f;
     private bool isDeadFlag;
 
     // Start is called before the first frame update
