@@ -13,7 +13,13 @@ public class SamplePlayer : MonoBehaviour
     public Wind wind;
     public attackgage Attackgage;
     public Transform parent;
-    public float STR=1;
+    public float STR;
+
+    GameObject StoneSword;
+    GameObject GoldSword;
+    GameObject Excalibur;
+
+    private WeaponManager weaponManager;
     //private Vector3 position = new Vector3();
 
     // Start is called before the first frame update
@@ -22,8 +28,10 @@ public class SamplePlayer : MonoBehaviour
         isBoots = false;
         wind = wind.GetComponent<Wind>();
         Attackgage = Attackgage.GetComponent<attackgage>();
-      
+        
+        STR = 5;
 
+        weaponManager = GetComponent<WeaponManager>();
     }
 
     // Update is called once per frame
@@ -43,7 +51,8 @@ public class SamplePlayer : MonoBehaviour
             Physics.IgnoreLayerCollision(playerCol, waterCol);
         }
         Attack();
-       
+
+        
     }
 
     public Vector3 playerPosition()
@@ -77,6 +86,31 @@ public class SamplePlayer : MonoBehaviour
         {
             isBoots = true;
         }
+
+        //StoneSword
+        if(col.gameObject.tag=="StoneSword")
+        {
+            StoneSword = GameObject.Find("StoneSword");
+            weaponManager = StoneSword.GetComponent<WeaponManager>();
+            STR = weaponManager.GetAttackPower();
+        }
+
+        //GoldSword
+        if (col.gameObject.tag == "GoldSword")
+        {
+            GoldSword = GameObject.Find("GoldSword");
+            weaponManager = GoldSword.GetComponent<WeaponManager>();
+            STR = weaponManager.GetAttackPower();
+        }
+
+        //Excalibur
+        if (col.gameObject.tag == "Excalibur")
+        {
+            Excalibur = GameObject.Find("Excalibur");
+            weaponManager = Excalibur.GetComponent<WeaponManager>();
+            STR = weaponManager.GetAttackPower();
+        }
+
     }
     private void Attack()
     {
