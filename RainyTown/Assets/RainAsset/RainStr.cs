@@ -54,24 +54,27 @@ public class RainStr : MonoBehaviour
             case 2:
 
                 var instantiateEffect = GameObject.Instantiate(effectobj[1]);
+               
                 if (istime >= 8)
                 {
-                    Destroy(instantiateEffect, 3);
+                    
                     israin = true;
                     istime = 0;                  
                 }
-
+               
 
                 break;
             case 3:
                 instantiateEffect = GameObject.Instantiate(effectobj[2]);
+               
                 if (istime >= 8)
                 {
-                    Destroy(instantiateEffect, 3);
+                  
                     israin = true;
                     istime = 0;
                     
                 }
+               
                 break;
             //case 3:
             //    instantiateEffect = GameObject.Instantiate(effectobj[3]);
