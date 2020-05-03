@@ -13,7 +13,13 @@ public class SamplePlayer : MonoBehaviour
     public Wind wind;
     public attackgage Attackgage;
     public Transform parent;
-    public float STR=1;
+    public float STR;
+
+    GameObject StoneSword;
+    GameObject GoldSword;
+    GameObject Excalibur;
+
+    private WeaponManager weaponManager;
     //private Vector3 position = new Vector3();
 
     private int remains;
@@ -24,6 +30,9 @@ public class SamplePlayer : MonoBehaviour
         isBoots = false;
         wind = wind.GetComponent<Wind>();
         Attackgage = Attackgage.GetComponent<attackgage>();
+
+        STR = 5;
+        weaponManager = GetComponent<WeaponManager>();
     }
 
     private void Awake()
@@ -89,6 +98,27 @@ public class SamplePlayer : MonoBehaviour
         if(col.gameObject.tag=="Boots")
         {
             isBoots = true;
+        }
+
+        if(col.gameObject.tag=="StoneSword")
+        {
+            StoneSword = GameObject.Find("StoneSword");
+            weaponManager = StoneSword.GetComponent<WeaponManager>();
+            STR = weaponManager.GetAttackPower();
+        }
+
+        if (col.gameObject.tag == "GoldSword")
+        {
+            GoldSword = GameObject.Find("StoneSword");
+            weaponManager = GoldSword.GetComponent<WeaponManager>();
+            STR = weaponManager.GetAttackPower();
+        }
+
+        if (col.gameObject.tag == "Excalibur")
+        {
+            Excalibur = GameObject.Find("Excalibur");
+            weaponManager = Excalibur.GetComponent<WeaponManager>();
+            STR = weaponManager.GetAttackPower();
         }
     }
     private void Attack()
