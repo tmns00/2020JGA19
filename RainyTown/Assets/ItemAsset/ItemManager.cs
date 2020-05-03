@@ -8,15 +8,10 @@ public class ItemManager : MonoBehaviour
 
     [SerializeField]
     private int items;
-    private bool isComplete;
+    public static bool isComplete;
 
     // Start is called before the first frame update
     void Start()
-    {
-        
-    }
-
-    private void Awake()
     {
         items = 0;
         isComplete = false;

@@ -16,6 +16,8 @@ public class TuyoEnemy : MonoBehaviour
     [SerializeField]
     private TuyoSearchSystem search;
 
+    private SamplePlayer samplePlayer;
+
     private float HP = 15.0f;
     private bool isDeadFlag;
 
@@ -63,7 +65,7 @@ public class TuyoEnemy : MonoBehaviour
 
     private void Damage()
     {
-        HP -= 5;
+        HP -= samplePlayer.STR;
     }
 
     private void Tracking()

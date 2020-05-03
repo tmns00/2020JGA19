@@ -66,7 +66,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        HP -= 5;
+        HP -= sampleplayer.STR;
         if (sampleplayer.isHitAttack)
         {
             Debug.Log("aaa");
