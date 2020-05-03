@@ -16,10 +16,13 @@ public class TuyoEnemy : MonoBehaviour
     [SerializeField]
     private TuyoSearchSystem search;
 
+    private float HP = 15.0f;
+    private bool isDeadFlag;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        isDeadFlag = false;
     }
 
     private void Awake()
@@ -36,6 +39,12 @@ public class TuyoEnemy : MonoBehaviour
             search = searchObject.GetComponent<TuyoSearchSystem>();
         }
 
+        if (isDeadFlag)
+            Delete();
+
+        if (HP <= 0)
+            isDeadFlag = true;
+
         vec = player.transform.position - transform.position;
 
         if (search.GetTrackFlag())
@@ -45,6 +54,16 @@ public class TuyoEnemy : MonoBehaviour
             velocity = Vector3.zero;
             DeleteAI();
         }
+    }
+
+    private void Delete()
+    {
+        Destroy(gameObject);
+    }
+
+    private void Damage()
+    {
+        HP -= 5;
     }
 
     private void Tracking()
@@ -74,6 +93,14 @@ public class TuyoEnemy : MonoBehaviour
     private void DeleteAI()
     {
         if (RainManager.rainLevel != 3)
-            Destroy(gameObject);
+            Delete();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "PlayerAttack")
+        {
+            Damage();
+        }
     }
 }

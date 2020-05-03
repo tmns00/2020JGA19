@@ -93,6 +93,6 @@ public class RainStr : MonoBehaviour
                
                 //break;
         }
-        Debug.Log(number);
+        //Debug.Log(number);
     }
 }

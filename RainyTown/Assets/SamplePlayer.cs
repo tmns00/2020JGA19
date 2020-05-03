@@ -86,7 +86,7 @@ public class SamplePlayer : MonoBehaviour
         if(isAttack)
         {
             Attackgage.gage -= 0.7f;
-            if(Input.GetKey(KeyCode.RightShift))
+            if(Input.GetKeyDown(KeyCode.RightShift))
             {
                 GameObject obj = (GameObject)Resources.Load("AttackHitBox");
                 Instantiate(obj,transform.position , Quaternion.identity,parent);
