@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -155,11 +155,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
-        type: 3}
-      propertyPath: m_Name
-      value: MuddyLoad (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 8720612843641478791, guid: 789e3439e582b374fbd8f0135d76d576,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -224,6 +219,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
+        type: 3}
+      propertyPath: m_Name
+      value: MuddyLoad (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 789e3439e582b374fbd8f0135d76d576, type: 3}
@@ -483,10 +483,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2033195901}
     m_Modifications:
-    - target: {fileID: 1518451702, guid: b5fcfbd61884cff4cb65c64b05a463e0, type: 3}
-      propertyPath: m_Name
-      value: Enemy (20)
-      objectReference: {fileID: 0}
     - target: {fileID: 1153441416, guid: b5fcfbd61884cff4cb65c64b05a463e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.02359
@@ -530,6 +526,10 @@ PrefabInstance:
     - target: {fileID: 1153441416, guid: b5fcfbd61884cff4cb65c64b05a463e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518451702, guid: b5fcfbd61884cff4cb65c64b05a463e0, type: 3}
+      propertyPath: m_Name
+      value: Enemy (20)
       objectReference: {fileID: 0}
     - target: {fileID: 1518451703, guid: b5fcfbd61884cff4cb65c64b05a463e0, type: 3}
       propertyPath: sampleplayer
@@ -712,11 +712,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
-        type: 3}
-      propertyPath: m_Name
-      value: MuddyLoad (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 8720612843641478791, guid: 789e3439e582b374fbd8f0135d76d576,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -781,6 +776,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
+        type: 3}
+      propertyPath: m_Name
+      value: MuddyLoad (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 789e3439e582b374fbd8f0135d76d576, type: 3}
@@ -1632,11 +1632,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7635636238910371547, guid: 62ef3b99dbb4a8f44bc64296b2a6a363,
-        type: 3}
-      propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
     - target: {fileID: 469965394, guid: 62ef3b99dbb4a8f44bc64296b2a6a363, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -50.700012
@@ -1748,6 +1743,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PlaneDistance
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635636238910371547, guid: 62ef3b99dbb4a8f44bc64296b2a6a363,
+        type: 3}
+      propertyPath: m_Name
+      value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 7635636238910371551, guid: 62ef3b99dbb4a8f44bc64296b2a6a363,
         type: 3}
@@ -2743,11 +2743,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
-        type: 3}
-      propertyPath: m_Name
-      value: MuddyLoad (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 8720612843641478791, guid: 789e3439e582b374fbd8f0135d76d576,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2813,6 +2808,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
+        type: 3}
+      propertyPath: m_Name
+      value: MuddyLoad (7)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 789e3439e582b374fbd8f0135d76d576, type: 3}
 --- !u!1 &507892917
@@ -2870,8 +2870,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -3117,12 +3115,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540169169}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &550756132 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7820945607113504009, guid: d0562d35045e33e4bafc731cbf8e8bde,
-    type: 3}
-  m_PrefabInstance: {fileID: 269622584304310856}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &572079008
 GameObject:
   m_ObjectHideFlags: 0
@@ -3177,7 +3169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atkg: {fileID: 572079011}
   gage: 100
-  player: {fileID: 1948982525}
+  player: {fileID: 0}
 --- !u!114 &572079011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3225,8 +3217,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &584735758
 GameObject:
   m_ObjectHideFlags: 0
@@ -4413,11 +4403,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
-        type: 3}
-      propertyPath: m_Name
-      value: MuddyLoad (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 8720612843641478791, guid: 789e3439e582b374fbd8f0135d76d576,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4482,6 +4467,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
+        type: 3}
+      propertyPath: m_Name
+      value: MuddyLoad (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 789e3439e582b374fbd8f0135d76d576, type: 3}
@@ -4996,11 +4986,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
-        type: 3}
-      propertyPath: m_Name
-      value: MuddyLoad (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 8720612843641478791, guid: 789e3439e582b374fbd8f0135d76d576,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5065,6 +5050,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
+        type: 3}
+      propertyPath: m_Name
+      value: MuddyLoad (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 789e3439e582b374fbd8f0135d76d576, type: 3}
@@ -5771,11 +5761,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
-        type: 3}
-      propertyPath: m_Name
-      value: MuddyLoad (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 8720612843641478791, guid: 789e3439e582b374fbd8f0135d76d576,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5841,6 +5826,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
+        type: 3}
+      propertyPath: m_Name
+      value: MuddyLoad (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 789e3439e582b374fbd8f0135d76d576, type: 3}
 --- !u!1001 &1172155746
@@ -5850,11 +5840,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7504193698507933170, guid: 881b13b1aa63a2c49a3c31739deb4f57,
-        type: 3}
-      propertyPath: m_Name
-      value: Manhole (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 5156563248690880645, guid: 881b13b1aa63a2c49a3c31739deb4f57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5909,6 +5894,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504193698507933170, guid: 881b13b1aa63a2c49a3c31739deb4f57,
+        type: 3}
+      propertyPath: m_Name
+      value: Manhole (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 881b13b1aa63a2c49a3c31739deb4f57, type: 3}
@@ -6148,7 +6138,7 @@ PrefabInstance:
     - target: {fileID: 1141306427, guid: a4f8bea52adfe17498be294d20007faa, type: 3}
       propertyPath: sampleplayer
       value: 
-      objectReference: {fileID: 1948982525}
+      objectReference: {fileID: 0}
     - target: {fileID: 1141306429, guid: a4f8bea52adfe17498be294d20007faa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.042305
@@ -6713,6 +6703,12 @@ Transform:
   m_Father: {fileID: 2033195901}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1309200523 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8749084756300650772, guid: cbc72085efd39d843824ee06a8f065be,
+    type: 3}
+  m_PrefabInstance: {fileID: 1451295798}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1311079970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7396,11 +7392,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
-        type: 3}
-      propertyPath: m_Name
-      value: MuddyLoad
-      objectReference: {fileID: 0}
     - target: {fileID: 8720612843641478791, guid: 789e3439e582b374fbd8f0135d76d576,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7466,6 +7457,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
+        type: 3}
+      propertyPath: m_Name
+      value: MuddyLoad
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 789e3439e582b374fbd8f0135d76d576, type: 3}
 --- !u!1001 &1451295798
@@ -7475,6 +7471,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 171618062862882648, guid: cbc72085efd39d843824ee06a8f065be,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1056458319427156419, guid: cbc72085efd39d843824ee06a8f065be,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3178917150785855635, guid: cbc72085efd39d843824ee06a8f065be,
         type: 3}
       propertyPath: m_Name
@@ -7485,6 +7491,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3794546771338590026, guid: cbc72085efd39d843824ee06a8f065be,
+        type: 3}
+      propertyPath: wind
+      value: 
+      objectReference: {fileID: 1207028392}
+    - target: {fileID: 3794546771338590026, guid: cbc72085efd39d843824ee06a8f065be,
+        type: 3}
+      propertyPath: Attackgage
+      value: 
+      objectReference: {fileID: 572079010}
+    - target: {fileID: 3794546771338590026, guid: cbc72085efd39d843824ee06a8f065be,
+        type: 3}
+      propertyPath: moveSpeeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3794546771338590026, guid: cbc72085efd39d843824ee06a8f065be,
+        type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 100950172}
     - target: {fileID: 4018741489835901426, guid: cbc72085efd39d843824ee06a8f065be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7555,6 +7581,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8749084756300650761, guid: cbc72085efd39d843824ee06a8f065be,
+        type: 3}
+      propertyPath: renderer
+      value: 
+      objectReference: {fileID: 1309200523}
     - target: {fileID: 8749084756300650767, guid: cbc72085efd39d843824ee06a8f065be,
         type: 3}
       propertyPath: moveSpeeed
@@ -7576,6 +7607,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 8749084756357900018, guid: cbc72085efd39d843824ee06a8f065be,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8749084756357900024, guid: cbc72085efd39d843824ee06a8f065be,
         type: 3}
       propertyPath: m_Layer
@@ -7586,42 +7622,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8749084756357900018, guid: cbc72085efd39d843824ee06a8f065be,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1056458319427156419, guid: cbc72085efd39d843824ee06a8f065be,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 171618062862882648, guid: cbc72085efd39d843824ee06a8f065be,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3794546771338590026, guid: cbc72085efd39d843824ee06a8f065be,
-        type: 3}
-      propertyPath: wind
-      value: 
-      objectReference: {fileID: 1207028392}
-    - target: {fileID: 3794546771338590026, guid: cbc72085efd39d843824ee06a8f065be,
-        type: 3}
-      propertyPath: Attackgage
-      value: 
-      objectReference: {fileID: 572079010}
-    - target: {fileID: 3794546771338590026, guid: cbc72085efd39d843824ee06a8f065be,
-        type: 3}
-      propertyPath: moveSpeeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3794546771338590026, guid: cbc72085efd39d843824ee06a8f065be,
-        type: 3}
-      propertyPath: parent
-      value: 
-      objectReference: {fileID: 100950172}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8749084756300650767, guid: cbc72085efd39d843824ee06a8f065be, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cbc72085efd39d843824ee06a8f065be, type: 3}
 --- !u!114 &1451295799 stripped
 MonoBehaviour:
@@ -7940,8 +7942,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -8205,11 +8205,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
-        type: 3}
-      propertyPath: m_Name
-      value: MuddyLoad (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 8720612843641478791, guid: 789e3439e582b374fbd8f0135d76d576,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8274,6 +8269,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
+        type: 3}
+      propertyPath: m_Name
+      value: MuddyLoad (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 789e3439e582b374fbd8f0135d76d576, type: 3}
@@ -9170,11 +9170,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
-        type: 3}
-      propertyPath: m_Name
-      value: MuddyLoad (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 8720612843641478791, guid: 789e3439e582b374fbd8f0135d76d576,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9239,6 +9234,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
+        type: 3}
+      propertyPath: m_Name
+      value: MuddyLoad (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 789e3439e582b374fbd8f0135d76d576, type: 3}
@@ -10112,8 +10112,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -10131,97 +10129,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891751657}
   m_CullTransparentMesh: 0
---- !u!1 &1893737501
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1893737502}
-  - component: {fileID: 1893737505}
-  - component: {fileID: 1893737504}
-  - component: {fileID: 1893737503}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1893737502
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893737501}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27, y: 0.5, z: -29.46}
-  m_LocalScale: {x: 3, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 550756132}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1893737503
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893737501}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1893737504
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893737501}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1893737505
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893737501}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1932821187
 GameObject:
   m_ObjectHideFlags: 0
@@ -10420,18 +10327,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59d8861787c4aef42a324354c70233b0, type: 3}
---- !u!114 &1948982525 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8749084756300650767, guid: cbc72085efd39d843824ee06a8f065be,
-    type: 3}
-  m_PrefabInstance: {fileID: 1451295798}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1954369d8c07dcc49916196956d063b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1956869864
 GameObject:
   m_ObjectHideFlags: 0
@@ -10934,11 +10829,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
-        type: 3}
-      propertyPath: m_Name
-      value: MuddyLoad (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 8720612843641478791, guid: 789e3439e582b374fbd8f0135d76d576,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11003,6 +10893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720612843641478795, guid: 789e3439e582b374fbd8f0135d76d576,
+        type: 3}
+      propertyPath: m_Name
+      value: MuddyLoad (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 789e3439e582b374fbd8f0135d76d576, type: 3}
@@ -11385,11 +11280,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7504193698507933170, guid: 881b13b1aa63a2c49a3c31739deb4f57,
-        type: 3}
-      propertyPath: m_Name
-      value: Manhole
-      objectReference: {fileID: 0}
     - target: {fileID: 5156563248690880645, guid: 881b13b1aa63a2c49a3c31739deb4f57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11444,6 +11334,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7504193698507933170, guid: 881b13b1aa63a2c49a3c31739deb4f57,
+        type: 3}
+      propertyPath: m_Name
+      value: Manhole
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 881b13b1aa63a2c49a3c31739deb4f57, type: 3}

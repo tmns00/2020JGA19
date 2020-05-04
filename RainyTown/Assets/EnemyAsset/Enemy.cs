@@ -17,13 +17,19 @@ public class Enemy : MonoBehaviour
     private searceSystem searce;
 
     public SamplePlayer sampleplayer;
+
+    private float HP = 10.0f;
+    private bool isDeadFlag;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         //searceObject = GameObject.Find("SearceObject");
         searce = searceObject.GetComponent<searceSystem>();
-        sampleplayer = sampleplayer.GetComponent<SamplePlayer>();
+        sampleplayer = player.GetComponent<SamplePlayer>();
+
+        isDeadFlag = false;
     }
 
     private void Awake()
@@ -34,6 +40,12 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (isDeadFlag)
+            Delete();
+
+        if (HP <= 0)
+            isDeadFlag = true;
+
         vec = player.transform.position - transform.position;
 
         if (searce.GetTrackFlag()/* && player != null*/)
@@ -46,14 +58,22 @@ public class Enemy : MonoBehaviour
         //Debug.Log(player.transform.position);
         //Debug.Log(transform.position);
     }
+
+    private void Delete()
+    {
+        Destroy(gameObject);
+    }
+
     void Die()
     {
+        HP -= sampleplayer.STR;
         if (sampleplayer.isHitAttack)
         {
             Debug.Log("aaa");
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
+
     private void Tracking()
     {
         Ray ray = new Ray(transform.position, (player.transform.position - transform.position));
@@ -78,6 +98,7 @@ public class Enemy : MonoBehaviour
             return;
         }
     }
+
     private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "PlayerAttack")
