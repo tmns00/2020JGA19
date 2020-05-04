@@ -6,7 +6,9 @@ public class WeaponManager : MonoBehaviour
 {
     public enum WeaponType
     {
-
+        StoneSword,
+        GoldSword,
+        Excalibur,
     }
 
     [SerializeField]

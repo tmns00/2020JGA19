@@ -58,7 +58,7 @@ public class SampleDelete : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy" && !isInvicible)
+        if ((collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Boss") && !isInvicible)
         {
             isInvicible = true;
             remains -= 1;

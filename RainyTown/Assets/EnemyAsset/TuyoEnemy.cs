@@ -18,7 +18,7 @@ public class TuyoEnemy : MonoBehaviour
 
     private SamplePlayer samplePlayer;
 
-    private float HP = 15.0f;
+    private float HP = 25.0f;
     private bool isDeadFlag;
 
     // Start is called before the first frame update
