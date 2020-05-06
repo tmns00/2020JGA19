@@ -11,6 +11,9 @@ TagManager:
   - Muddy
   - Boots
   - PlayerAttack
+  - StoneSword
+  - GoldSword
+  - Excalibur
   layers:
   - Default
   - TransparentFX

@@ -4,27 +4,64 @@ using UnityEngine;
 
 public class SampleDelete : MonoBehaviour
 {
+    private int remains;
+
+    [SerializeField]
+    private bool isInvicible;
+    private float countTime;
+    private float limit;
+
+    public Renderer renderer;
+    private float nextTime;
+    private float interval;
+
     // Start is called before the first frame update
     void Start()
     {
+        isInvicible = false;
+        limit = 3.0f;
 
+        nextTime = Time.time;
+        interval = 1.0f;
+    }
+
+    private void Awake()
+    {
+        remains = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Enemy")
+        if (remains <= 0)
             Destroy(gameObject);
+
+        if(isInvicible)
+        {
+            countTime += Time.deltaTime;        
+
+            if(countTime>=limit)
+            {
+                countTime = 0;
+                isInvicible = false;
+                renderer.enabled = true;
+            }
+
+            if(Time.time>nextTime)
+            {
+                renderer.enabled = !renderer.enabled;
+
+                nextTime += interval;
+            }
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
-            Destroy(gameObject);
+        if ((collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Boss") && !isInvicible)
+        {
+            isInvicible = true;
+            remains -= 1;
+        }
     }
 }
