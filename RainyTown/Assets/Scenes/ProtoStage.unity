@@ -7985,13 +7985,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003370183}
-  m_LocalRotation: {x: 0.35355338, y: -0.35355338, z: 0.1464466, w: 0.8535535}
-  m_LocalPosition: {x: 6.16, y: 12.19, z: -7.09}
+  m_LocalRotation: {x: 0.3812272, y: -0.08052145, z: 0.033353075, w: 0.9203639}
+  m_LocalPosition: {x: 1.7, y: 12.19, z: -6.7}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 581533416}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 135, z: 0}
+  m_LocalEulerAnglesHint: {x: 45.000004, y: -10, z: 0}
 --- !u!4 &2004952715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5156563248690880645, guid: 881b13b1aa63a2c49a3c31739deb4f57,
@@ -8313,6 +8313,16 @@ PrefabInstance:
       propertyPath: Attackgage
       value: 
       objectReference: {fileID: 572079010}
+    - target: {fileID: 6442631339275233292, guid: b99eecb1369aee249ba7c75f34e4a1b2,
+        type: 3}
+      propertyPath: moveSpeeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442631339275233293, guid: b99eecb1369aee249ba7c75f34e4a1b2,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 6442631339275233294, guid: b99eecb1369aee249ba7c75f34e4a1b2,
         type: 3}
       propertyPath: m_LocalPosition.x
