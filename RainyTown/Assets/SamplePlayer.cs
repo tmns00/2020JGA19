@@ -132,7 +132,7 @@ public class SamplePlayer : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.RightShift))
             {
                 GameObject obj = (GameObject)Resources.Load("AttackHitBox");
-                Instantiate(obj,transform.position , Quaternion.identity,parent);
+                Instantiate(obj,new Vector3(transform.position.x,transform.position.y,transform.position.z) , Quaternion.identity,parent);
                 isHitAttack = true;
             }
          
