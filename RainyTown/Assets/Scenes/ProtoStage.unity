@@ -1445,6 +1445,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 572079010, guid: 62ef3b99dbb4a8f44bc64296b2a6a363, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 6442631339855697639}
     - target: {fileID: 1891751658, guid: 62ef3b99dbb4a8f44bc64296b2a6a363, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10834,3 +10838,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b99eecb1369aee249ba7c75f34e4a1b2, type: 3}
+--- !u!114 &6442631339855697639 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6442631339275233292, guid: b99eecb1369aee249ba7c75f34e4a1b2,
+    type: 3}
+  m_PrefabInstance: {fileID: 6442631339855697638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1954369d8c07dcc49916196956d063b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
