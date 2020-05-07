@@ -18,6 +18,7 @@ public class Boss : MonoBehaviour
 
     float istime = 0;
 
+    float istime2 = 0;
 
     private float rnd;
 
@@ -55,6 +56,7 @@ public class Boss : MonoBehaviour
         searceB = searceObject.GetComponent<searceSystemB>();
 
         speed2 = 0.1f;
+        TargetPosition();
     }
 
     private void Awake()
@@ -69,6 +71,7 @@ public class Boss : MonoBehaviour
 
         istime += 1 / 60f;
 
+        istime2 += 1 / 60f;
 
         pposi = player.transform.position;
 
@@ -85,11 +88,19 @@ public class Boss : MonoBehaviour
         }
         else if (searceB.GetTrackBFlag() == false && istime > 3)
         {
-            TargetPosition();
+            
             transform.position = Vector3.MoveTowards(transform.position, tratgetPosition, speed2);
             if(transform.position== tratgetPosition)
             {
                 isTPosition = true;
+                TargetPosition();
+            }
+
+            if (istime2 >= 5)
+            {
+                isTPosition = true;
+                TargetPosition();
+                istime2 = 0;
             }
         }
 
