@@ -22,7 +22,7 @@ public class searceSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        searce.radius = 2 + RainManager.rainLevel * 1.0f;
+        searce.radius = 4 + RainManager.rainLevel * 1.0f;
     }
 
     private void OnTriggerEnter(Collider other)
