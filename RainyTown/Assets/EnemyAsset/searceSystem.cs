@@ -8,6 +8,8 @@ public class searceSystem : MonoBehaviour
 
     public bool isTracking;
 
+    public Transform eneTrans;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,9 @@ public class searceSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        searce.radius = 4 + RainManager.rainLevel * 1.0f;
+        transform.position = eneTrans.position;
+        //searce.radius = 4 * RainManager.rainLevel * 1.0f;
+        transform.localScale = new Vector3(10, 10, 10) + RainManager.rainLevel * Vector3.one * 2.0f;
     }
 
     private void OnTriggerEnter(Collider other)
