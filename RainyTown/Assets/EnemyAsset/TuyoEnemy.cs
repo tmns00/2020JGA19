@@ -94,7 +94,7 @@ public class TuyoEnemy : MonoBehaviour
 
     private void DeleteAI()
     {
-        if (RainManager.rainLevel != 3)
+        if (RainManager.rainLevel == 1)
             Delete();
     }
 

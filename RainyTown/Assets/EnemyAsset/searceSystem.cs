@@ -26,7 +26,7 @@ public class searceSystem : MonoBehaviour
     {
         transform.position = eneTrans.position;
         //searce.radius = 4 * RainManager.rainLevel * 1.0f;
-        transform.localScale = new Vector3(10, 10, 10) + RainManager.rainLevel * Vector3.one * 2.0f;
+        transform.localScale = new Vector3(5, 5, 5) + RainManager.rainLevel * Vector3.one * 5.0f;
     }
 
     private void OnTriggerEnter(Collider other)
