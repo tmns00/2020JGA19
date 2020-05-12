@@ -36,16 +36,23 @@ public class SampleDelete : MonoBehaviour
         if (remains <= 0)
             Destroy(gameObject);
 
-        if(isInvicible)
+        if (countTime >= limit)
+        {
+            countTime = 0;
+            isInvicible = false;
+            renderer.enabled = true;
+        }
+
+        if (isInvicible)
         {
             countTime += Time.deltaTime;        
 
-            if(countTime>=limit)
-            {
-                countTime = 0;
-                isInvicible = false;
-                renderer.enabled = true;
-            }
+            //if(countTime>=limit)
+            //{
+            //    countTime = 0;
+            //    isInvicible = false;
+            //    renderer.enabled = true;
+            //}
 
             if(Time.time>nextTime)
             {

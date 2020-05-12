@@ -25,9 +25,9 @@ public class EnemySpawnSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (RainManager.rainLevel == 3 && once)
+        if (RainManager.rainLevel >= 2 && once)
             CreateObj();
-        else if (RainManager.rainLevel != 3)
+        else if (RainManager.rainLevel == 1)
             once = true;
     }
 
