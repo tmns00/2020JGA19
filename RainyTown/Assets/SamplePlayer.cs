@@ -15,7 +15,7 @@ public class SamplePlayer : MonoBehaviour
     public Transform parent;
     public float STR;
     public float rotateSpeed = 4.0f;
-    
+
     GameObject StoneSword;
     GameObject GoldSword;
     GameObject Excalibur;
@@ -52,21 +52,21 @@ public class SamplePlayer : MonoBehaviour
         float v = Input.GetAxis("Vertical");
 
         transform.Translate(
-            new Vector3(h, 0, v) * moveSpeeed * Time.deltaTime-wind.WindSpeed);
-        Vector3 angle = new Vector3(Input.GetAxis("Mouse X") * rotateSpeed,0,0);
-        Quaternion rot = Quaternion.Euler(0,angle.x,0);
+            new Vector3(h, 0, v) * moveSpeeed * Time.deltaTime - wind.WindSpeed * 0.2f);
+        Vector3 angle = new Vector3(Input.GetAxis("Mouse X") * rotateSpeed, 0, 0);
+        Quaternion rot = Quaternion.Euler(0, angle.x, 0);
         Quaternion q = transform.rotation;
-        transform.rotation = q*rot;
+        transform.rotation = q * rot;
 
         //長靴を取得した時、水たまりを通れるように変更
-        if (isBoots==true)
+        if (isBoots == true)
         {
             int playerCol = LayerMask.NameToLayer("Player");
             int waterCol = LayerMask.NameToLayer("Water");
             Physics.IgnoreLayerCollision(playerCol, waterCol);
         }
         Attack();
-       
+
     }
 
     public Vector3 playerPosition()
@@ -88,9 +88,9 @@ public class SamplePlayer : MonoBehaviour
                     //プレイヤーのY座標を取得
                     float y = gameObject.transform.position.y;
 
-                    
+
                     //プレイヤー中心より下の位置で当たったかどうか。
-                    if (contact.point.y>0.7f)
+                    if (contact.point.y > 0.7f)
                     {
                         Vector3 transpoint = GameObject.Find("transpoint").transform.position;
                         this.gameObject.transform.position = transpoint;
@@ -118,7 +118,7 @@ public class SamplePlayer : MonoBehaviour
             }
         }
 
-        if(collision.gameObject.tag=="water")
+        if (collision.gameObject.tag == "water")
         {
             if (RainManager.rainLevel == 3)
             {
@@ -153,12 +153,12 @@ public class SamplePlayer : MonoBehaviour
     private void OnTriggerEnter(Collider col)
     {
         //長靴を取得
-        if(col.gameObject.tag=="Boots")
+        if (col.gameObject.tag == "Boots")
         {
             isBoots = true;
         }
 
-        if(col.gameObject.tag=="StoneSword")
+        if (col.gameObject.tag == "StoneSword")
         {
             StoneSword = GameObject.Find("StoneSword");
             weaponManager = StoneSword.GetComponent<WeaponManager>();
@@ -181,28 +181,28 @@ public class SamplePlayer : MonoBehaviour
     }
     private void Attack()
     {
-        if (Input.GetKey(KeyCode.Space)&&!isAttack)
+        if (Input.GetKey(KeyCode.Space) && !isAttack)
             isAttack = true;
 
-        if(isAttack)
+        if (isAttack)
         {
             Attackgage.gage -= 0.7f;
-            if(Input.GetKeyDown(KeyCode.RightShift))
+            if (Input.GetKeyDown(KeyCode.RightShift))
             {
                 GameObject obj = (GameObject)Resources.Load("AttackHitBox");
-                Instantiate(obj,new Vector3(transform.position.x,transform.position.y,transform.position.z) , Quaternion.identity,parent);
+                Instantiate(obj, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity, parent);
                 isHitAttack = true;
             }
-         
-            if(Attackgage.gage<=0)
+
+            if (Attackgage.gage <= 0)
             {
                 isHitAttack = false;
                 Attackgage.gage = 0;
                 isAttack = false;
-               
+
             }
-        
+
         }
     }
-    
+
 }

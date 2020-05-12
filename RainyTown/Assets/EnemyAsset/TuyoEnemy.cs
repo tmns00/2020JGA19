@@ -15,6 +15,8 @@ public class TuyoEnemy : MonoBehaviour
     private GameObject searchObject;
     [SerializeField]
     private TuyoSearchSystem search;
+    [SerializeField]
+    private bool isTracking;
 
     private SamplePlayer samplePlayer;
 
@@ -25,6 +27,7 @@ public class TuyoEnemy : MonoBehaviour
     void Start()
     {
         isDeadFlag = false;
+        isTracking = false;
     }
 
     private void Awake()
@@ -51,7 +54,8 @@ public class TuyoEnemy : MonoBehaviour
 
         if (search.GetTrackFlag())
             Tracking();
-        else
+
+        if(!isTracking)
         {
             velocity = Vector3.zero;
             DeleteAI();
@@ -79,12 +83,14 @@ public class TuyoEnemy : MonoBehaviour
         {
             if (hit.collider.tag == "Player" || hit.collider.tag == "Wall" || hit.collider.tag == "Untagged" || hit.collider.tag == "Item")
             {
+                isTracking = true;
                 velocity = vec.normalized;
                 transform.Translate(
                     new Vector3(velocity.x, 0, velocity.z) * moveSpeed * Time.deltaTime);
             }
             else if (hit.collider.tag == "RestPoint")
             {
+                isTracking = false;
                 transform.Translate(Vector3.zero);
             }
 

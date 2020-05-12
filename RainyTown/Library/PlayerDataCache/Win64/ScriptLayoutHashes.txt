@@ -1,9 +1,8 @@
 Win64
 PlayerPath?
-C:/Users/reo-h/OneDrive/デスクトップ/プロト４/RainyTown.exe
+C:/Users/reo-h/OneDrive/デスクトップ/19班α/RainyTown.exe
 SceneListBegin?
 Assets/Scenes/ProtoStage.unity
-Assets/Scenes/ProtoBoss.unity
 SceneListEnd?
 3c08375166df118bd1801438fc36b92f Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 77c21079ace8d76ce6e941d3dabbfe6e Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -90,7 +89,9 @@ aa165095bcf0f4d99594ea33df01c81b UnityEngine.UI.dll:UnityEngine.UI.Slider
 0fd6822f6177297bd0eb4d83cc7a9030 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-f32b00aa8f41059858300eef8a698b60 Assembly-CSharp.dll:.SampleDelete
+7d143de2e3d9dd07fdbd8b60f3aa0c98 Assembly-CSharp.dll:.CameraAngle
+b41302e7ba487776e2a903c6b62e9311 Assembly-CSharp.dll:.SampleDelete
+fb9e55080a3800d9758abc1863843c19 Assembly-CSharp.dll:.GoalLight
 36f96c190e244321e128769d9c5120ac Unity.ProBuilder.dll:UnityEngine.ProBuilder.ProBuilderMesh
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -124,7 +125,7 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 32f6d1d5a09e5c94c633a32edd3e6836 Unity.ProBuilder.dll:UnityEngine.ProBuilder.BezierShape
 ca910f344cf61e78b3f04492ad1faa3e Assembly-CSharp.dll:.rainUI1
 4b0a84af9c2224f8d4cc5d36127bebd5 Assembly-CSharp.dll:.RainStr
-de55bdce8632129a855592a26ad3087c Assembly-CSharp.dll:.TuyoSearchSystem
+8f9c2628a06d6556bc9a3319bcf21d20 Assembly-CSharp.dll:.TuyoSearchSystem
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Boots
 b8a5e8091ab0b8861d2add371082c5e0 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.sampleRainManager
@@ -135,13 +136,13 @@ dd46d13e26a174b00d43e4cebddf3188 Assembly-CSharp.dll:.searceSystemB
 e9389e944eb81a3a9df56fcdb09ce6a9 Unity.ProBuilder.dll:UnityEngine.ProBuilder.TriggerBehaviour
 e9389e944eb81a3a9df56fcdb09ce6a9 Unity.ProBuilder.dll:UnityEngine.ProBuilder.ColliderBehaviour
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
-de55bdce8632129a855592a26ad3087c Assembly-CSharp.dll:.searceSystem
+8f9c2628a06d6556bc9a3319bcf21d20 Assembly-CSharp.dll:.searceSystem
 055d6a3397e15e9cf784bec82540b9db Assembly-CSharp.dll:.attackgage
 bc1993c5b8dc20bd87ad9362b71a77bc Assembly-CSharp.dll:.EnemySpawnSystem
 a677a1efc7c427ecdd25cbf7aff248d8 Assembly-CSharp.dll:.WeaponManager
-d41fce501fa11c42f0170e7914d6fdbc Assembly-CSharp.dll:.TuyoEnemy
+868bb388d9e5aef54c61c8b486bd9f95 Assembly-CSharp.dll:.TuyoEnemy
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ToBossScene
+b976fb0d681bb3b12284a3613c6941e8 Assembly-CSharp.dll:.ToBossScene
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.destry
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -181,13 +182,12 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.RainManager
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 335cf3a7e23aaeb5a51dc11e54460354 Assembly-CSharp.dll:.Wind
-d682eef1f920d99f8f1149644a3810a6 Assembly-CSharp.dll:.ItemManager
+8237a7d154f0ee754fc22888f5cf4c85 Assembly-CSharp.dll:.ItemManager
 ca910f344cf61e78b3f04492ad1faa3e Assembly-CSharp.dll:.rainUI
-fe1ba1491dc9f5024d86b1fa0616f6b2 Assembly-CSharp.dll:.SamplePlayer
+6eb675a5b06606552a6f855d6a79ed88 Assembly-CSharp.dll:.SamplePlayer
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 df434544c9f7b33d1cc7e635b180d279 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.waterUP
-7d143de2e3d9dd07fdbd8b60f3aa0c98 Assembly-CSharp.dll:.CameraAngle
 22a2b624c65b9f001cec888786e690b9 Assembly-CSharp.dll:.OptionScript

@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        moveSpeed = 4.0f;
+        moveSpeed = 4.5f;
     }
 
     // Update is called once per frame

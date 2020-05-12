@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class RainManager : MonoBehaviour
 {
-    public static float rainLevel = 1;
+    public static float rainLevel = 2;
 }
