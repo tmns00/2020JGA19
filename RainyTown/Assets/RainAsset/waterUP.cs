@@ -19,12 +19,12 @@ public class waterUP : MonoBehaviour
 
         if (RainManager.rainLevel == 3)
         {           
-            pos.y =-0.2f;
+            pos.y =0.25f;
             myTransform.position = pos;
         }
         else
         {
-            pos.y = -0.45f;
+            pos.y = -0.48f;
             myTransform.position = pos;
         }
     }

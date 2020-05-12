@@ -15,6 +15,8 @@ public class SampleDelete : MonoBehaviour
     private float nextTime;
     private float interval;
 
+    public UnityEngine.UI.Text stockcount;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +63,8 @@ public class SampleDelete : MonoBehaviour
                 nextTime += interval;
             }
         }
+
+        stockcount.text = remains.ToString();
     }
 
     private void OnCollisionEnter(Collision collision)

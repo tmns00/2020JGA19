@@ -10,6 +10,8 @@ public class ItemManager : MonoBehaviour
     private int items;
     public static bool isComplete;
 
+    public UnityEngine.UI.Text itemcount;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +26,14 @@ public class ItemManager : MonoBehaviour
             isComplete = true;
 
         //Debug.Log(isComplete);
+
+        itemcount.text = items.ToString();
     }
 
     public void Count()
     {
         items += 1;
     }
+
+
 }
