@@ -640,7 +640,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &212503735 stripped
 Transform:
@@ -798,7 +798,7 @@ PrefabInstance:
     - target: {fileID: 7635636238910371551, guid: 62ef3b99dbb4a8f44bc64296b2a6a363,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7635636238910371551, guid: 62ef3b99dbb4a8f44bc64296b2a6a363,
         type: 3}
@@ -2517,7 +2517,7 @@ Transform:
   - {fileID: 2004952715}
   - {fileID: 638766691}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &638429510
 PrefabInstance:
@@ -2846,6 +2846,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!4 &707983500 stripped
@@ -3086,6 +3091,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -3698,7 +3708,7 @@ Transform:
   - {fileID: 1112822843}
   - {fileID: 190440305}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &890092698
 Mesh:
@@ -4246,12 +4256,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003187765}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 8.86, y: -0.5, z: -9.4}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 733194241}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1019832040
 PrefabInstance:
@@ -4545,6 +4555,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!1 &1091028860
@@ -4701,6 +4716,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!4 &1104596297 stripped
@@ -4785,6 +4805,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -5092,6 +5117,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!4 &1181318635 stripped
@@ -5177,6 +5207,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!4 &1185091326 stripped
@@ -5261,6 +5296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -5429,7 +5469,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1236463987
 PrefabInstance:
@@ -5564,6 +5604,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -6102,6 +6147,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!4 &1382100163 stripped
@@ -6186,6 +6236,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -6521,6 +6576,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -7360,6 +7420,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!4 &1722672379 stripped
@@ -7444,6 +7509,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -7661,6 +7731,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -7918,6 +7993,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -8346,7 +8426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   playerObject: {fileID: 0}
-  rotateSpeed: 2
+  rotateSpeed: 0.01
 --- !u!114 &2003370188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8429,6 +8509,36 @@ Transform:
   - {fileID: 377842926}
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2072875756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2072875757}
+  m_Layer: 0
+  m_Name: transpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2072875757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072875756}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.198, y: 0.25, z: -51.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2075494207 stripped
 Transform:
@@ -8581,6 +8691,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -8758,6 +8873,11 @@ PrefabInstance:
         type: 3}
       propertyPath: moveSpeeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6442631339275233292, guid: b99eecb1369aee249ba7c75f34e4a1b2,
+        type: 3}
+      propertyPath: rotateSpeed
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6442631339275233293, guid: b99eecb1369aee249ba7c75f34e4a1b2,
         type: 3}
