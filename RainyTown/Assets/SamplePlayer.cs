@@ -88,8 +88,9 @@ public class SamplePlayer : MonoBehaviour
                     //プレイヤーのY座標を取得
                     float y = gameObject.transform.position.y;
 
+                    
                     //プレイヤー中心より下の位置で当たったかどうか。
-                    if (contact.point.y< y)
+                    if (contact.point.y >-2.8f)
                     {
                         Vector3 transpoint = GameObject.Find("transpoint").transform.position;
                         this.gameObject.transform.position = transpoint;

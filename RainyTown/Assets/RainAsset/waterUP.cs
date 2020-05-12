@@ -24,7 +24,7 @@ public class waterUP : MonoBehaviour
         }
         else
         {
-            pos.y = -0.45f;
+            pos.y = -0.48f;
             myTransform.position = pos;
         }
     }
