@@ -90,7 +90,7 @@ public class SamplePlayer : MonoBehaviour
 
                     
                     //プレイヤー中心より下の位置で当たったかどうか。
-                    if (contact.point.y >-2.8f)
+                    if (contact.point.y>0.7f)
                     {
                         Vector3 transpoint = GameObject.Find("transpoint").transform.position;
                         this.gameObject.transform.position = transpoint;
@@ -115,6 +115,29 @@ public class SamplePlayer : MonoBehaviour
             else
             {
                 moveSpeeed = 10f;
+            }
+        }
+
+        if(collision.gameObject.tag=="water")
+        {
+            if (RainManager.rainLevel == 3)
+            {
+                foreach (ContactPoint contact in collision.contacts)
+                {
+                    //ワールド座標からローカル座標にする。
+                    Vector3 relativePoint = transform.InverseTransformPoint(contact.point);
+
+                    //プレイヤーのY座標を取得
+                    float y = gameObject.transform.position.y;
+
+
+                    //プレイヤー中心より下の位置で当たったかどうか。
+                    if (contact.point.y > 0.7f)
+                    {
+                        Vector3 transpoint = GameObject.Find("transpoint").transform.position;
+                        this.gameObject.transform.position = transpoint;
+                    }
+                }
             }
         }
     }
