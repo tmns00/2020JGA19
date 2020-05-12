@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 112
+  controlID: 12
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 113
+  controlID: 13
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 114
+  controlID: 14
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,8 +185,8 @@ MonoBehaviour:
     y: 0
     width: 218
     height: 457
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -381,21 +381,21 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 540}
-      m_SelectedIDs: f8bbfeff
-      m_LastClickedID: -82952
-      m_ExpandedIDs: faaffeff2eb3feffc4b3feff40befeffa8befefff4befeff4ebffeff26c1fefff0e2ffff32e3ffff38e3ffff56e3ffffaae3ffffd4e3ffffdae3fffff2e3fffff8e3ffff28e4ffff40e4ffff5ee4ffff76e4ffffe6e4ffff1ee5ffff66e5ffffe0e5fffff6e5ffff34e6ffff48e6ffff58e6ffff98e6ffff9ae6ffffdcfbffffce550000fa560000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 82e9ffff
+      m_LastClickedID: -5758
+      m_ExpandedIDs: 64f9ffff28fbffffdcfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: TuyoEnemyPos (9)
-        m_OriginalName: TuyoEnemyPos (9)
+        m_Name: Cube
+        m_OriginalName: Cube
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -85730
+        m_UserData: 5082
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -439,9 +439,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 20.70601, y: -0.17205235, z: -35.0517}
+    m_Target: {x: 25.99, y: 0.5, z: -2.77}
     speed: 2
-    m_Value: {x: 20.70601, y: -0.17205235, z: -35.0517}
+    m_Value: {x: 25.99, y: 0.5, z: -2.77}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -469,13 +469,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.1756545, y: -0.795106, z: 0.27265954, w: -0.51245964}
+    m_Target: {x: -0.039455675, y: -0.9495985, z: 0.13365783, w: -0.2807874}
     speed: 2
-    m_Value: {x: -0.17565395, y: -0.79510355, z: 0.2726587, w: -0.512458}
+    m_Value: {x: -0.039455675, y: -0.9495985, z: 0.13365783, w: -0.2807874}
   m_Size:
-    m_Target: 60.810898
+    m_Target: 8.413383
     speed: 2
-    m_Value: 60.810898
+    m_Value: 8.413383
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -551,19 +551,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/EnemyAsset
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 87
   m_LastFolders:
-  - Assets/EnemyAsset
+  - Assets
   m_LastFoldersGridSize: 87
   m_LastProjectPath: D:\2020JGA19\RainyTown
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 7}
-    m_SelectedIDs: 240f0000
-    m_LastClickedID: 3876
+    m_SelectedIDs: ba0c0000
+    m_LastClickedID: 3258
     m_ExpandedIDs: 00000000ba0c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -644,7 +644,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 192}
     m_GridSize: 87
   m_DirectoriesAreaWidth: 133
 --- !u!114 &17
