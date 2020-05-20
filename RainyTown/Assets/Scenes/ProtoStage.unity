@@ -9242,7 +9242,7 @@ GameObject:
   - component: {fileID: 2134068709}
   - component: {fileID: 2134068708}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GoalText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
