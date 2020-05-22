@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 855112480}
   - component: {fileID: 855112479}
   - component: {fileID: 855112478}
+  - component: {fileID: 1611351527147966348}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Enemy
@@ -108,6 +109,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &1611351527147966348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855112476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64efc27d78a73bc4ba5142ab467e7348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAttack: 0
+  notMoveTime: 5
 --- !u!1 &1518451702
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,6 +190,8 @@ MonoBehaviour:
   searceObject: {fileID: 1910595760}
   searce: {fileID: 0}
   sampleplayer: {fileID: 0}
+  body: {fileID: 855112476}
+  attackAI: {fileID: 0}
 --- !u!1 &1910595760
 GameObject:
   m_ObjectHideFlags: 0
