@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1288,7 +1288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   needItems: 5
   items: 0
-  itemcount: {fileID: 0}
+  itemcount: {fileID: 371454886}
 --- !u!4 &297433704
 Transform:
   m_ObjectHideFlags: 0
@@ -1640,6 +1640,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 370538337}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &371454884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 371454885}
+  - component: {fileID: 371454887}
+  - component: {fileID: 371454886}
+  m_Layer: 5
+  m_Name: itemcount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &371454885
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371454884}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 446977894}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 89, y: 172}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &371454886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371454884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9665504, g: 0.9811321, b: 0.29156283, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &371454887
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371454884}
+  m_CullTransparentMesh: 0
 --- !u!1001 &377842925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1766,6 +1843,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5fcfbd61884cff4cb65c64b05a463e0, type: 3}
+--- !u!1 &428721970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 428721971}
+  m_Layer: 0
+  m_Name: transpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &428721971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428721970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.06, y: 1.0102661, z: -15.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &438285324 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8086919868537054530, guid: 74de112fa608f3a419d4c8147ffce6f7,
@@ -3069,6 +3176,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!4 &707983500 stripped
@@ -3309,6 +3421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -4818,6 +4935,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!1001 &1072516199
@@ -4972,6 +5094,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!4 &1104596297 stripped
@@ -5056,6 +5183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -5412,6 +5544,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!4 &1181318635 stripped
@@ -5497,6 +5634,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!4 &1185091326 stripped
@@ -5581,6 +5723,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -6010,6 +6157,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -6611,6 +6763,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!4 &1382100163 stripped
@@ -6695,6 +6852,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -7037,6 +7199,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -7906,6 +8073,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!4 &1722672379 stripped
@@ -7914,6 +8086,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1722672378}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1725232206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1725232207}
+  - component: {fileID: 1725232209}
+  - component: {fileID: 1725232208}
+  m_Layer: 5
+  m_Name: playercount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1725232207
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725232206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 446977894}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 274, y: 166}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1725232208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725232206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9339623, g: 0.24230155, b: 0.24230155, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1725232209
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725232206}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1730946765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7990,6 +8239,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -8283,6 +8537,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!4 &1781476946 stripped
@@ -8539,6 +8798,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: samplewater (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
@@ -9143,6 +9407,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: samplewater (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5144220389764918809, guid: cd521532f7c93594987d81a1ded3de67,
+        type: 3}
+      propertyPath: m_TagString
+      value: water
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd521532f7c93594987d81a1ded3de67, type: 3}
 --- !u!4 &2082937570 stripped
@@ -9396,6 +9665,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6442631339275233295, guid: b99eecb1369aee249ba7c75f34e4a1b2,
+        type: 3}
+      propertyPath: stockcount
+      value: 
+      objectReference: {fileID: 1725232208}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b99eecb1369aee249ba7c75f34e4a1b2, type: 3}
 --- !u!114 &6442631339855697639 stripped
