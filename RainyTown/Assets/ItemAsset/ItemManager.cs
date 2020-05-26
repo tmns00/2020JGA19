@@ -12,11 +12,15 @@ public class ItemManager : MonoBehaviour
 
     public UnityEngine.UI.Text itemcount;
 
+    public AudioClip getse;
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         items = 0;
         isComplete = false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,6 +37,7 @@ public class ItemManager : MonoBehaviour
     public void Count()
     {
         items += 1;
+        audioSource.PlayOneShot(getse);
     }
 
 
