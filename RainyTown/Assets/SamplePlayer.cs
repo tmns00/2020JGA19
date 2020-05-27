@@ -16,9 +16,6 @@ public class SamplePlayer : MonoBehaviour
     public float STR;
     public float rotateSpeed = 4.0f;
 
-    GameObject StoneSword;
-    GameObject GoldSword;
-    GameObject Excalibur;
 
     private WeaponManager weaponManager;
 
@@ -168,26 +165,6 @@ public class SamplePlayer : MonoBehaviour
             isBoots = true;
         }
 
-        if (col.gameObject.tag == "StoneSword")
-        {
-            StoneSword = GameObject.Find("StoneSword");
-            weaponManager = StoneSword.GetComponent<WeaponManager>();
-            STR = weaponManager.GetAttackPower();
-        }
-
-        if (col.gameObject.tag == "GoldSword")
-        {
-            GoldSword = GameObject.Find("StoneSword");
-            weaponManager = GoldSword.GetComponent<WeaponManager>();
-            STR = weaponManager.GetAttackPower();
-        }
-
-        if (col.gameObject.tag == "Excalibur")
-        {
-            Excalibur = GameObject.Find("Excalibur");
-            weaponManager = Excalibur.GetComponent<WeaponManager>();
-            STR = weaponManager.GetAttackPower();
-        }
 
         //地下出口
         if(col.gameObject.tag=="ManholeExit")
