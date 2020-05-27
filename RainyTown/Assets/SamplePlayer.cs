@@ -65,8 +65,8 @@ public class SamplePlayer : MonoBehaviour
             int waterCol = LayerMask.NameToLayer("Water");
             Physics.IgnoreLayerCollision(playerCol, waterCol);
         }
-        Attack();
 
+        Attack();
     }
 
     public Vector3 playerPosition()
@@ -140,6 +140,16 @@ public class SamplePlayer : MonoBehaviour
                 }
             }
         }
+
+        if (collision.gameObject.tag == "Manhole")
+        {
+            //マンホールにふれて、Qキーを押したらマンホールに入れるようにする。
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Vector3 undergroundpoint = GameObject.Find("undergroundpoint").transform.position;
+                this.gameObject.transform.position = undergroundpoint;
+            }
+        }
     }
 
     private void OnCollisionExit(Collision collision)
@@ -148,7 +158,13 @@ public class SamplePlayer : MonoBehaviour
         {
             moveSpeeed = 10f;
         }
+
+        if(collision.gameObject.tag=="Manhole")
+        {
+            //isManhole = false;
+        }
     }
+
 
     private void OnTriggerEnter(Collider col)
     {
@@ -177,6 +193,34 @@ public class SamplePlayer : MonoBehaviour
             Excalibur = GameObject.Find("Excalibur");
             weaponManager = Excalibur.GetComponent<WeaponManager>();
             STR = weaponManager.GetAttackPower();
+        }
+
+        //マンホールの出口
+        if (col.gameObject.tag == "ManholeExit")
+        {
+            int M = Random.Range(0, 4);
+
+            if (M == 0)
+            {
+                Vector3 Manhole = GameObject.Find("Manhole").transform.position;
+                this.gameObject.transform.position = Manhole;
+            }
+            if(M==1)
+            {
+                Vector3 Manhole = GameObject.Find("Manhole1").transform.position;
+                this.gameObject.transform.position = Manhole;
+            }
+            if(M==2)
+            {
+                Vector3 Manhole = GameObject.Find("Manhole2").transform.position;
+                this.gameObject.transform.position = Manhole;
+            }
+            if(M==3)
+            {
+                Vector3 Manhole = GameObject.Find("Manhole3").transform.position;
+                this.gameObject.transform.position = Manhole;
+            }
+            
         }
     }
     private void Attack()
