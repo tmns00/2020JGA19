@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/ProtoStage.unity
+- path: Assets/Scenes/ProtoStart.unity
   isLoaded: 1
   isActive: 1

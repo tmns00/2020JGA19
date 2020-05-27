@@ -106,4 +106,31 @@ public class Enemy : MonoBehaviour
             Die();
         }
     }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "Muddy")
+        {
+            if (RainManager.rainLevel == 2)
+            {
+                moveSpeed = 2.5f;
+            }
+            else if (RainManager.rainLevel == 3)
+            {
+                moveSpeed = 0.5f;
+            }
+            else
+            {
+                moveSpeed = 4.5f;
+            }
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Muddy")
+        {
+            moveSpeed = 4.5f;
+        }
+    }
 }

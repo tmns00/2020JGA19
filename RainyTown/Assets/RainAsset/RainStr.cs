@@ -19,6 +19,7 @@ public class RainStr : MonoBehaviour
        
         
         var instantiateEffect = GameObject.Instantiate(effectobj[0]);
+        rnd = 1;
         
     }
 
@@ -31,7 +32,19 @@ public class RainStr : MonoBehaviour
         {
             if (istime >= 3)
             {
-                rnd = Random.Range(1, 4);
+                //rnd = Random.Range(1, 4);
+                if (rnd == 1)
+                {
+                    rnd = 2;
+                }
+                else if (rnd == 2)
+                {
+                    rnd = 3;
+                }
+                else if (rnd == 3)
+                {
+                    rnd = 1;
+                }
                 nextrain = rnd;
                 israin = false;
             }
@@ -76,26 +89,8 @@ public class RainStr : MonoBehaviour
                 }
                
                 break;
-            //case 3:
-            //    instantiateEffect = GameObject.Instantiate(effectobj[3]);
-            //    if (istime >= 5)
-            //    {
-            //        Destroy(instantiateEffect, 3);                   
-            //        istime = 0;
-                    
-            //    }
-            //    break;     
-            //case 4:
-            //    instantiateEffect = GameObject.Instantiate(effectobj[4]);
-            //    if (istime >= 5)
-            //    {
-            //        Destroy(instantiateEffect, 3);                   
-            //        istime = 0;
-                   
-            //    }
-               
-                //break;
+            
         }
-        //Debug.Log(number);
-    }
+    }        //Debug.Log(number);
+
 }
