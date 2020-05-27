@@ -20,14 +20,15 @@ public class TuyoEnemy : MonoBehaviour
 
     private SamplePlayer samplePlayer;
 
-    private float HP = 25.0f;
-    private bool isDeadFlag;
+    public GameObject body;
+    [SerializeField]
+    private EnemyAttackAI attackAI;
 
     // Start is called before the first frame update
     void Start()
     {
-        isDeadFlag = false;
         isTracking = false;
+        attackAI = body.GetComponent<EnemyAttackAI>();
     }
 
     private void Awake()
@@ -44,21 +45,22 @@ public class TuyoEnemy : MonoBehaviour
             search = searchObject.GetComponent<TuyoSearchSystem>();
         }
 
-        if (isDeadFlag)
-            Delete();
+        vec = player.transform.position - body.transform.position;
 
-        if (HP <= 0)
-            isDeadFlag = true;
-
-        vec = player.transform.position - transform.position;
-
-        if (search.GetTrackFlag())
+        if (search.GetTrackFlag() && !attackAI.isAttack)
             Tracking();
+        if (!search.GetTrackFlag())
+            isTracking = false;
 
         if(!isTracking)
         {
             velocity = Vector3.zero;
             DeleteAI();
+        }
+
+        if(attackAI.isAttack)
+        {
+            body.transform.Translate(Vector3.zero);
         }
     }
 
@@ -67,31 +69,26 @@ public class TuyoEnemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void Damage()
-    {
-        HP -= samplePlayer.STR;
-    }
-
     private void Tracking()
     {
-        Ray ray = new Ray(transform.position, (player.transform.position - transform.position));
+        Ray ray = new Ray(body.transform.position, (player.transform.position - body.transform.position));
         RaycastHit hit;
 
-        Debug.DrawRay(transform.position, ray.direction * 10, Color.red, 10);
+        Debug.DrawRay(body.transform.position, ray.direction * 10, Color.red, 10);
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.tag == "Player" || hit.collider.tag == "Wall" || hit.collider.tag == "Untagged" || hit.collider.tag == "Item")
+            if (hit.collider.tag == "Player" /*|| hit.collider.tag == "Wall" || hit.collider.tag == "Untagged" || hit.collider.tag == "Item"*/)
             {
                 isTracking = true;
                 velocity = vec.normalized;
-                transform.Translate(
+                body.transform.Translate(
                     new Vector3(velocity.x, 0, velocity.z) * moveSpeed * Time.deltaTime);
             }
             else if (hit.collider.tag == "RestPoint")
             {
                 isTracking = false;
-                transform.Translate(Vector3.zero);
+                body.transform.Translate(Vector3.zero);
             }
 
             return;
@@ -102,13 +99,5 @@ public class TuyoEnemy : MonoBehaviour
     {
         if (RainManager.rainLevel == 1)
             Delete();
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "PlayerAttack")
-        {
-            Damage();
-        }
     }
 }
