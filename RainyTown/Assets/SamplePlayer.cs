@@ -118,6 +118,17 @@ public class SamplePlayer : MonoBehaviour
         //    }
         //}
 
+        //マンホールにのった時
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (collision.gameObject.tag == "Manhole")
+            {
+                Vector3 undergroundpoint = GameObject.Find("undergroundpoint").transform.position;
+                this.gameObject.transform.position = undergroundpoint;
+            }
+        }
+
+
         if (collision.gameObject.tag == "water")
         {
             if (RainManager.rainLevel == 3)
@@ -177,6 +188,31 @@ public class SamplePlayer : MonoBehaviour
             Excalibur = GameObject.Find("Excalibur");
             weaponManager = Excalibur.GetComponent<WeaponManager>();
             STR = weaponManager.GetAttackPower();
+        }
+
+        if(col.gameObject.tag=="ManholeExit")
+        {
+            int M = Random.Range(0, 4);
+            if(M==0)
+            {
+                Vector3 Manhole = GameObject.Find("Manhole").transform.position;
+                this.gameObject.transform.position = Manhole;
+            }
+            if(M==1)
+            {
+                Vector3 Manhole = GameObject.Find("Manhole1").transform.position;
+                this.gameObject.transform.position = Manhole;
+            }
+            if(M==2)
+            {
+                Vector3 Manhole = GameObject.Find("Manhole2").transform.position;
+                this.gameObject.transform.position = Manhole;
+            }
+            if(M==3)
+            {
+                Vector3 Manhole = GameObject.Find("Manhole3").transform.position;
+                this.gameObject.transform.position = Manhole;
+            }
         }
     }
     private void Attack()
