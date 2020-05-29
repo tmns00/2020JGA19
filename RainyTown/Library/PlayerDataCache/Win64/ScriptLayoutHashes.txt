@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/reo-h/OneDrive/デスクトップ/19班α/RainyTown.exe
+C:/Users/reo-h/OneDrive/デスクトップ/19_マツムラレオ_ベータ版/RainyTown.exe
 SceneListBegin?
 Assets/Scenes/ProtoStage.unity
 SceneListEnd?
@@ -56,6 +56,8 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 d3c76b14a25eebd3a3323dd43297919c Unity.TextMeshPro.dll:TMPro.TMP_InputField
 f6633ace6e530c0000f2ac6da4269c52 Unity.ProBuilder.dll:UnityEngine.ProBuilder.PolyShape
+71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
+71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ItemDelete
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -124,12 +126,12 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 32f6d1d5a09e5c94c633a32edd3e6836 Unity.ProBuilder.dll:UnityEngine.ProBuilder.BezierShape
 ca910f344cf61e78b3f04492ad1faa3e Assembly-CSharp.dll:.rainUI1
-4b0a84af9c2224f8d4cc5d36127bebd5 Assembly-CSharp.dll:.RainStr
+20b3c2e02974e9682c574beea1545405 Assembly-CSharp.dll:.RainStr
 8f9c2628a06d6556bc9a3319bcf21d20 Assembly-CSharp.dll:.TuyoSearchSystem
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Boots
 b8a5e8091ab0b8861d2add371082c5e0 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.sampleRainManager
-4a4bb7c4a5f3c301b10f0234937d3f9a Assembly-CSharp.dll:.Enemy
+cade21ece37b904816e2eda205b6617e Assembly-CSharp.dll:.Enemy
 db68c28d84bb714913dde110d630f2dd Assembly-CSharp.dll:.windUI
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 dd46d13e26a174b00d43e4cebddf3188 Assembly-CSharp.dll:.searceSystemB
@@ -140,7 +142,7 @@ e9389e944eb81a3a9df56fcdb09ce6a9 Unity.ProBuilder.dll:UnityEngine.ProBuilder.Col
 055d6a3397e15e9cf784bec82540b9db Assembly-CSharp.dll:.attackgage
 bc1993c5b8dc20bd87ad9362b71a77bc Assembly-CSharp.dll:.EnemySpawnSystem
 a677a1efc7c427ecdd25cbf7aff248d8 Assembly-CSharp.dll:.WeaponManager
-868bb388d9e5aef54c61c8b486bd9f95 Assembly-CSharp.dll:.TuyoEnemy
+7adcd075e1fd0589064664eb2f2c7ab2 Assembly-CSharp.dll:.TuyoEnemy
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
 b976fb0d681bb3b12284a3613c6941e8 Assembly-CSharp.dll:.ToBossScene
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.destry
@@ -182,7 +184,8 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.RainManager
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 335cf3a7e23aaeb5a51dc11e54460354 Assembly-CSharp.dll:.Wind
-8237a7d154f0ee754fc22888f5cf4c85 Assembly-CSharp.dll:.ItemManager
+fcb905e7052035fbd87abb07b964df5b Assembly-CSharp.dll:.ItemManager
+3d3b739b14bfb61d07cafcce6c233950 Assembly-CSharp.dll:.EnemyAttackAI
 ca910f344cf61e78b3f04492ad1faa3e Assembly-CSharp.dll:.rainUI
 6eb675a5b06606552a6f855d6a79ed88 Assembly-CSharp.dll:.SamplePlayer
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
