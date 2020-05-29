@@ -54,10 +54,8 @@ public class Enemy : MonoBehaviour
 
         vec = player.transform.position - body.transform.position;
 
-        if (searce.GetTrackFlag()/* && player != null*/)
+        if (searce.GetTrackFlag() && !attackAI.isAttack)
             Tracking();
-        else
-            velocity = Vector3.zero;
 
         Debug.Log(searce.GetTrackFlag());
 
