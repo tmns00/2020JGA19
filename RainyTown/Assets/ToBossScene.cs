@@ -31,8 +31,10 @@ public class ToBossScene : MonoBehaviour
         //if (ItemManager.isComplete || other.gameObject.tag == "Player")
         //    SceneManager.LoadScene("ProtoBoss");
         if (ItemManager.isComplete)
-            clearText.text = "CLEAR";
-
+        {
+            //clearText.text = "CLEAR";
+            SceneManager.LoadScene("ProtoClear");
+        }            
         if (!ItemManager.isComplete && !flag)
         {
             flag = true;

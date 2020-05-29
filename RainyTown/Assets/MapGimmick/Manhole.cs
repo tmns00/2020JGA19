@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Manhole : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Manhole : MonoBehaviour
     private bool isSplash;
     [SerializeField]
     private bool once;
+
+    public Text manholeText;
 
     // Start is called before the first frame update
     void Start()
@@ -51,11 +54,18 @@ public class Manhole : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
+        {
             playerRigid = collision.rigidbody;
+            manholeText.gameObject.SetActive(true);
+        }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-            playerRigid = null;
+         playerRigid = null;
+         if(collision.gameObject.tag=="Player")
+         {
+             manholeText.gameObject.SetActive(false);
+         }
     }
 }

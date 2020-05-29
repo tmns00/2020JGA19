@@ -11,10 +11,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleMap.unity
     guid: 264bd49347aab7649ac4afb4afa82d0b
-  - enabled: 1
-    path: Assets/Scenes/ProtoStage.unity
-    guid: eab5ad8bde7e67a40b6a93c81ebe9bf4
   - enabled: 0
     path: Assets/Scenes/ProtoBoss.unity
     guid: dd95d20e0ecdc09419bc38edc314e77a
+  - enabled: 1
+    path: Assets/Scenes/ProtoStart.unity
+    guid: c043536818a136345a2050427660cdb2
+  - enabled: 1
+    path: Assets/Scenes/ProtoStage.unity
+    guid: eab5ad8bde7e67a40b6a93c81ebe9bf4
+  - enabled: 1
+    path: Assets/Scenes/ProtoClear.unity
+    guid: 10f13b9cf9ebe4d4cb6304f0846edb4c
   m_configObjects: {}

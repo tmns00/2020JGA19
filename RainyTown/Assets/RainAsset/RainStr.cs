@@ -14,12 +14,12 @@ public class RainStr : MonoBehaviour
     float number=0;
     bool israin=true;
     float rnd;
-    public Transform parent;
     void Start()
     {
        
         
-        var instantiateEffect = GameObject.Instantiate(effectobj[0],transform.position+new Vector3(0,15,0),Quaternion.Euler(90,0,0),parent);
+        var instantiateEffect = GameObject.Instantiate(effectobj[0]);
+        rnd = 1;
         
     }
 
@@ -32,7 +32,19 @@ public class RainStr : MonoBehaviour
         {
             if (istime >= 3)
             {
-                rnd = Random.Range(1, 4);
+                //rnd = Random.Range(1, 4);
+                if (rnd == 1)
+                {
+                    rnd = 2;
+                }
+                else if (rnd == 2)
+                {
+                    rnd = 3;
+                }
+                else if (rnd == 3)
+                {
+                    rnd = 1;
+                }
                 nextrain = rnd;
                 israin = false;
             }
@@ -54,7 +66,7 @@ public class RainStr : MonoBehaviour
                 break;
             case 2:
 
-                var instantiateEffect = GameObject.Instantiate(effectobj[1], transform.position + new Vector3(0, 15, 0), Quaternion.Euler(90, 0, 0));
+                var instantiateEffect = GameObject.Instantiate(effectobj[1]);
                
                 if (istime >= 8)
                 {
@@ -66,7 +78,7 @@ public class RainStr : MonoBehaviour
 
                 break;
             case 3:
-                instantiateEffect = GameObject.Instantiate(effectobj[2], transform.position + new Vector3(0, 15, 0), Quaternion.Euler(90, 0, 0));
+                instantiateEffect = GameObject.Instantiate(effectobj[2]);
                
                 if (istime >= 8)
                 {
@@ -77,26 +89,8 @@ public class RainStr : MonoBehaviour
                 }
                
                 break;
-            //case 3:
-            //    instantiateEffect = GameObject.Instantiate(effectobj[3]);
-            //    if (istime >= 5)
-            //    {
-            //        Destroy(instantiateEffect, 3);                   
-            //        istime = 0;
-                    
-            //    }
-            //    break;     
-            //case 4:
-            //    instantiateEffect = GameObject.Instantiate(effectobj[4]);
-            //    if (istime >= 5)
-            //    {
-            //        Destroy(instantiateEffect, 3);                   
-            //        istime = 0;
-                   
-            //    }
-               
-                //break;
+            
         }
-        //Debug.Log(number);
-    }
+    }        //Debug.Log(number);
+
 }

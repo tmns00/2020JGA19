@@ -16,9 +16,6 @@ public class SamplePlayer : MonoBehaviour
     public float STR;
     public float rotateSpeed = 4.0f;
 
-    GameObject StoneSword;
-    GameObject GoldSword;
-    GameObject Excalibur;
 
     private WeaponManager weaponManager;
 
@@ -32,7 +29,7 @@ public class SamplePlayer : MonoBehaviour
     void Start()
     {
         isBoots = false;
-        wind = wind.GetComponent<Wind>();
+        //wind = wind.GetComponent<Wind>();
         Attackgage = Attackgage.GetComponent<attackgage>();
 
         STR = 5;
@@ -52,7 +49,7 @@ public class SamplePlayer : MonoBehaviour
         float v = Input.GetAxis("Vertical");
 
         transform.Translate(
-            new Vector3(h, 0, v) * moveSpeeed * Time.deltaTime - wind.WindSpeed * 0.2f);
+            new Vector3(h, 0, v) * moveSpeeed * Time.deltaTime );
         Vector3 angle = new Vector3(Input.GetAxis("Mouse X") * rotateSpeed, 0, 0);
         Quaternion rot = Quaternion.Euler(0, angle.x, 0);
         Quaternion q = transform.rotation;
@@ -102,21 +99,21 @@ public class SamplePlayer : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.tag == "Muddy")
-        {
-            if (RainManager.rainLevel == 2)
-            {
-                moveSpeeed = 5f;
-            }
-            else if (RainManager.rainLevel == 3)
-            {
-                moveSpeeed = 0.5f;
-            }
-            else
-            {
-                moveSpeeed = 10f;
-            }
-        }
+        //if (collision.gameObject.tag == "Muddy")
+        //{
+        //    if (RainManager.rainLevel == 2)
+        //    {
+        //        moveSpeeed = 5f;
+        //    }
+        //    else if (RainManager.rainLevel == 3)
+        //    {
+        //        moveSpeeed = 0.5f;
+        //    }
+        //    else
+        //    {
+        //        moveSpeeed = 10f;
+        //    }
+        //}
 
         if (collision.gameObject.tag == "water")
         {
@@ -140,15 +137,25 @@ public class SamplePlayer : MonoBehaviour
                 }
             }
         }
-    }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Muddy")
+        //マンホールにのっている時
+        if(collision.gameObject.tag=="Manhole")
         {
-            moveSpeeed = 10f;
+            if(Input.GetKeyDown(KeyCode.Q))
+            {
+                Vector3 undergroundpoint = GameObject.Find("undergroundpoint").transform.position;
+                this.gameObject.transform.position = undergroundpoint;
+            }
         }
     }
+
+    //private void OnCollisionExit(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Muddy")
+    //    {
+    //        moveSpeeed = 10f;
+    //    }
+    //}
 
     private void OnTriggerEnter(Collider col)
     {
@@ -158,25 +165,31 @@ public class SamplePlayer : MonoBehaviour
             isBoots = true;
         }
 
-        if (col.gameObject.tag == "StoneSword")
-        {
-            StoneSword = GameObject.Find("StoneSword");
-            weaponManager = StoneSword.GetComponent<WeaponManager>();
-            STR = weaponManager.GetAttackPower();
-        }
 
-        if (col.gameObject.tag == "GoldSword")
+        //地下出口
+        if(col.gameObject.tag=="ManholeExit")
         {
-            GoldSword = GameObject.Find("StoneSword");
-            weaponManager = GoldSword.GetComponent<WeaponManager>();
-            STR = weaponManager.GetAttackPower();
-        }
-
-        if (col.gameObject.tag == "Excalibur")
-        {
-            Excalibur = GameObject.Find("Excalibur");
-            weaponManager = Excalibur.GetComponent<WeaponManager>();
-            STR = weaponManager.GetAttackPower();
+            int M = Random.Range(0, 4);
+            if(M==0)
+            {
+                Vector3 Manhole = GameObject.Find("Manhole").transform.position;
+                this.gameObject.transform.position = Manhole;
+            }
+            if(M==1)
+            {
+                Vector3 Manhole = GameObject.Find("Manhole1").transform.position;
+                this.gameObject.transform.position = Manhole;
+            }
+            if (M == 2)
+            {
+                Vector3 Manhole = GameObject.Find("Manhole2").transform.position;
+                this.gameObject.transform.position = Manhole;
+            }
+            if (M == 3)
+            {
+                Vector3 Manhole = GameObject.Find("Manhole3").transform.position;
+                this.gameObject.transform.position = Manhole;
+            }
         }
     }
     private void Attack()
