@@ -14,11 +14,12 @@ public class RainStr : MonoBehaviour
     float number=0;
     bool israin=true;
     float rnd;
+    public Transform parent;
     void Start()
     {
        
         
-        var instantiateEffect = GameObject.Instantiate(effectobj[0]);
+        var instantiateEffect = GameObject.Instantiate(effectobj[0],transform.position+new Vector3(0,15,0),Quaternion.Euler(90,0,0),parent);
         rnd = 1;
         
     }
@@ -66,7 +67,7 @@ public class RainStr : MonoBehaviour
                 break;
             case 2:
 
-                var instantiateEffect = GameObject.Instantiate(effectobj[1]);
+                var instantiateEffect = GameObject.Instantiate(effectobj[1], transform.position + new Vector3(0, 15, 0), Quaternion.Euler(90, 0, 0));
                
                 if (istime >= 8)
                 {
@@ -78,7 +79,7 @@ public class RainStr : MonoBehaviour
 
                 break;
             case 3:
-                instantiateEffect = GameObject.Instantiate(effectobj[2]);
+                instantiateEffect = GameObject.Instantiate(effectobj[2], transform.position + new Vector3(0, 15, 0), Quaternion.Euler(90, 0, 0));
                
                 if (istime >= 8)
                 {
