@@ -8,13 +8,15 @@ public class SampleDelete : MonoBehaviour
 
     [SerializeField]
     private bool isInvicible;
+    [SerializeField]
+    GameObject Fadeout;
     private float countTime;
     private float limit;
 
     public Renderer renderer;
     private float nextTime;
     private float interval;
-
+   
     public UnityEngine.UI.Text stockcount;
 
     // Start is called before the first frame update
@@ -36,8 +38,11 @@ public class SampleDelete : MonoBehaviour
     void Update()
     {
         if (remains <= 0)
-            Destroy(gameObject);
-
+        {
+            Fadeout.SetActive(true);
+        }
+       
+           // Destroy(gameObject);
         if (countTime >= limit)
         {
             countTime = 0;

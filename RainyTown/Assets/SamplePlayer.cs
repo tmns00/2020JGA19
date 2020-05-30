@@ -15,7 +15,7 @@ public class SamplePlayer : MonoBehaviour
     public Transform parent;
     public float STR;
     public float rotateSpeed = 4.0f;
-
+    
 
     private WeaponManager weaponManager;
 

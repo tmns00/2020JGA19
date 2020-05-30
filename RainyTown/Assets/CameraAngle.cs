@@ -21,7 +21,7 @@ public class CameraAngle : MonoBehaviour
     {
         if (RainUIManager.isStart)
         {
-            transform.position -= new Vector3(0, 0.5f, 0);
+            transform.position -= new Vector3(0, 0.2f, 0);
         }
     }
 
