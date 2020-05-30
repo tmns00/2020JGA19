@@ -18,6 +18,10 @@ public class Enemy : MonoBehaviour
 
     public SamplePlayer sampleplayer;
 
+    public GameObject body;
+    [SerializeField]
+    private EnemyAttackAI attackAI;
+
     private float HP = 15.0f;
     private bool isDeadFlag;
 
@@ -30,6 +34,8 @@ public class Enemy : MonoBehaviour
         sampleplayer = player.GetComponent<SamplePlayer>();
 
         isDeadFlag = false;
+
+        attackAI = body.GetComponent<EnemyAttackAI>();
     }
 
     private void Awake()
@@ -46,15 +52,18 @@ public class Enemy : MonoBehaviour
         if (HP <= 0)
             isDeadFlag = true;
 
-        vec = player.transform.position - transform.position;
+        vec = player.transform.position - body.transform.position;
 
-        if (searce.GetTrackFlag()/* && player != null*/)
+        if (searce.GetTrackFlag() && !attackAI.isAttack)
             Tracking();
-        else
-            velocity = Vector3.zero;
 
         Debug.Log(searce.GetTrackFlag());
-      
+
+        if (attackAI.isAttack)
+        {
+            body.transform.Translate(Vector3.zero);
+        }
+
         //Debug.Log(player.transform.position);
         //Debug.Log(transform.position);
     }
@@ -76,22 +85,22 @@ public class Enemy : MonoBehaviour
 
     private void Tracking()
     {
-        Ray ray = new Ray(transform.position, (player.transform.position - transform.position));
+        Ray ray = new Ray(body.transform.position, (player.transform.position - body.transform.position));
         RaycastHit hit;
 
-        Debug.DrawRay(transform.position, ray.direction * 10, Color.red, 10);
+        Debug.DrawRay(body.transform.position, ray.direction * 10, Color.red, 10);
 
         if (Physics.Raycast(ray, out hit))
         {
             if (hit.collider.tag == "Player" || hit.collider.tag == "Wall" || hit.collider.tag == "Untagged" || hit.collider.tag == "Item")
             {
                 velocity = vec.normalized;
-                transform.Translate(
+                body.transform.Translate(
                     new Vector3(velocity.x, 0, velocity.z) * moveSpeed * Time.deltaTime);
             }
             else if (hit.collider.tag == "RestPoint")
             {
-                transform.Translate(Vector3.zero);
+                body.transform.Translate(Vector3.zero);
             }
 
             Debug.Log(hit.collider.tag);
