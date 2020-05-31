@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
 
     private float HP = 15.0f;
     private bool isDeadFlag;
-
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
 
         if (HP <= 0)
             isDeadFlag = true;
-
+       
         vec = player.transform.position - body.transform.position;
         //body.transform.rotation = Quaternion.Euler(0, Vector3.Angle(transform.up, vec), 0);
 

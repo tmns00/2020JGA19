@@ -15,7 +15,7 @@ public class SamplePlayer : MonoBehaviour
     public Transform parent;
     public float STR;
     public float rotateSpeed = 4.0f;
-
+    
 
     private WeaponManager weaponManager;
 
@@ -30,7 +30,7 @@ public class SamplePlayer : MonoBehaviour
     {
         isBoots = false;
         //wind = wind.GetComponent<Wind>();
-        Attackgage = Attackgage.GetComponent<attackgage>();
+       
 
         STR = 5;
         weaponManager = GetComponent<WeaponManager>();
@@ -45,25 +45,27 @@ public class SamplePlayer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-
-        transform.Translate(
-            new Vector3(h, 0, v) * moveSpeeed * Time.deltaTime );
-        Vector3 angle = new Vector3(Input.GetAxis("Mouse X") * rotateSpeed, 0, 0);
-        Quaternion rot = Quaternion.Euler(0, angle.x, 0);
-        Quaternion q = transform.rotation;
-        transform.rotation = q * rot;
-
-        //長靴を取得した時、水たまりを通れるように変更
-        if (isBoots == true)
+        if (RainUIManager.isStart)
         {
-            int playerCol = LayerMask.NameToLayer("Player");
-            int waterCol = LayerMask.NameToLayer("Water");
-            Physics.IgnoreLayerCollision(playerCol, waterCol);
-        }
-        Attack();
+            float h = Input.GetAxis("Horizontal");
+            float v = Input.GetAxis("Vertical");
 
+            transform.Translate(
+                new Vector3(h, 0, v) * moveSpeeed * Time.deltaTime);
+            Vector3 angle = new Vector3(Input.GetAxis("Mouse X") * rotateSpeed, 0, 0);
+            Quaternion rot = Quaternion.Euler(0, angle.x, 0);
+            Quaternion q = transform.rotation;
+            transform.rotation = q * rot;
+
+            //長靴を取得した時、水たまりを通れるように変更
+            if (isBoots == true)
+            {
+                int playerCol = LayerMask.NameToLayer("Player");
+                int waterCol = LayerMask.NameToLayer("Water");
+                Physics.IgnoreLayerCollision(playerCol, waterCol);
+            }
+
+        }
     }
 
     public Vector3 playerPosition()
@@ -99,21 +101,7 @@ public class SamplePlayer : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        //if (collision.gameObject.tag == "Muddy")
-        //{
-        //    if (RainManager.rainLevel == 2)
-        //    {
-        //        moveSpeeed = 5f;
-        //    }
-        //    else if (RainManager.rainLevel == 3)
-        //    {
-        //        moveSpeeed = 0.5f;
-        //    }
-        //    else
-        //    {
-        //        moveSpeeed = 10f;
-        //    }
-        //}
+       
 
         if (collision.gameObject.tag == "water")
         {
@@ -192,30 +180,6 @@ public class SamplePlayer : MonoBehaviour
             }
         }
     }
-    private void Attack()
-    {
-        if (Input.GetKey(KeyCode.Space) && !isAttack)
-            isAttack = true;
-
-        if (isAttack)
-        {
-            Attackgage.gage -= 0.7f;
-            if (Input.GetKeyDown(KeyCode.RightShift))
-            {
-                GameObject obj = (GameObject)Resources.Load("AttackHitBox");
-                Instantiate(obj, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity, parent);
-                isHitAttack = true;
-            }
-
-            if (Attackgage.gage <= 0)
-            {
-                isHitAttack = false;
-                Attackgage.gage = 0;
-                isAttack = false;
-
-            }
-
-        }
-    }
+   
 
 }
