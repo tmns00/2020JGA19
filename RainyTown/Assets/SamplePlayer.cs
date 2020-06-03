@@ -10,8 +10,6 @@ public class SamplePlayer : MonoBehaviour
     public bool isAttack;
     public bool isHitAttack;
     Vector3 pos;
-    public Wind wind;
-    public attackgage Attackgage;
     public Transform parent;
     public float STR;
     public float rotateSpeed = 4.0f;
