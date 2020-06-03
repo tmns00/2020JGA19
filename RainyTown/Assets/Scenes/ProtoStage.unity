@@ -2856,6 +2856,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProtoMap2
       objectReference: {fileID: 0}
+    - target: {fileID: 6059181212385477775, guid: c290199dd89b17743948cc48d7e1cb15,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 46a39dc1df317af4892089ba2b4d1f6e, type: 2}
     - target: {fileID: 6059181212962061624, guid: c290199dd89b17743948cc48d7e1cb15,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
