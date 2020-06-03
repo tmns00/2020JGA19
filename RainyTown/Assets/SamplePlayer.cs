@@ -137,6 +137,8 @@ public class SamplePlayer : MonoBehaviour
             {
                 Vector3 undergroundpoint = GameObject.Find("undergroundpoint").transform.position;
                 this.gameObject.transform.position = undergroundpoint;
+                Vector3 ManholeExit = GameObject.Find("ManholeExit").transform.position;
+                transform.LookAt(ManholeExit);
             }
         }
     }
