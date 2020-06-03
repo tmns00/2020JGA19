@@ -4,31 +4,26 @@ using UnityEngine;
 
 public class CameraAngle : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject mainCamera;
-    [SerializeField]
-    private GameObject playerObject;
-    public float rotateSpeed = 2.0f;
-   
+  
     // Start is called before the first frame update
     void Start()
     {
-        mainCamera = Camera.main.gameObject;
-        playerObject = GameObject.Find("protoPlayer");
 
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        rotateCamera();
+        if (transform.position.y > 2.0f)
+            Transform();
     }
-    private void rotateCamera()
+    void Transform()
     {
-        Vector3 angle = new Vector3(/*Input.GetAxis("Mouse X") * rotateSpeed*/0, Input.GetAxis("Mouse Y") * rotateSpeed, 0);
-        //mainCamera.transform.RotateAround(playerObject.transform.position, Vector3.up, angle.x);
-        mainCamera.transform.RotateAround(playerObject.transform.position, transform.right, angle.y);
-       
+        if (RainUIManager.isStart)
+        {
+            transform.position -= new Vector3(0, 0.2f, 0);
+        }
     }
+
 }
 

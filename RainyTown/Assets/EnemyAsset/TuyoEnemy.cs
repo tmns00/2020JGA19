@@ -17,7 +17,7 @@ public class TuyoEnemy : MonoBehaviour
     private TuyoSearchSystem search;
     [SerializeField]
     private bool isTracking;
-
+  
     private SamplePlayer samplePlayer;
 
     public GameObject body;
@@ -29,6 +29,7 @@ public class TuyoEnemy : MonoBehaviour
     {
         isTracking = false;
         attackAI = body.GetComponent<EnemyAttackAI>();
+
     }
 
     private void Awake()
@@ -39,7 +40,8 @@ public class TuyoEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player==null || search==null)
+       
+        if (player == null || search == null)
         {
             player = GameObject.FindGameObjectWithTag("Player");
             search = searchObject.GetComponent<TuyoSearchSystem>();
@@ -52,13 +54,13 @@ public class TuyoEnemy : MonoBehaviour
         if (!search.GetTrackFlag())
             isTracking = false;
 
-        if(!isTracking)
+        if (!isTracking)
         {
             velocity = Vector3.zero;
             DeleteAI();
         }
 
-        if(attackAI.isAttack)
+        if (attackAI.isAttack)
         {
             body.transform.Translate(Vector3.zero);
         }
