@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ProtoBoss.unity
     guid: dd95d20e0ecdc09419bc38edc314e77a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ProtoStart.unity
     guid: c043536818a136345a2050427660cdb2
   - enabled: 1
