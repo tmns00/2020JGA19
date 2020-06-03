@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraAngle : MonoBehaviour
 {
-  
+    bool isGameStart = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +14,14 @@ public class CameraAngle : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (transform.position.y > 2.0f)
-            Transform();
+        if (isGameStart)
+        {
+            if (transform.position.y > 2.0)
+                Transform();
+            if (transform.position.y < 2.0)
+                isGameStart = false;
+        }
+       
     }
     void Transform()
     {
