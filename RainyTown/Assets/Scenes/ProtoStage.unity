@@ -10142,6 +10142,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: protoPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 241447111869479756, guid: 25a93d8dd98d85e4dadbbc2496029bd2,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 241447111869479757, guid: 25a93d8dd98d85e4dadbbc2496029bd2,
         type: 3}
       propertyPath: Attackgage

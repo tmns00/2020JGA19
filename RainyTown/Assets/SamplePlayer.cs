@@ -16,7 +16,7 @@ public class SamplePlayer : MonoBehaviour
     public float STR;
     public float rotateSpeed = 4.0f;
 
-
+    private Rigidbody rb;
     private WeaponManager weaponManager;
 
     [SerializeField]
@@ -24,17 +24,33 @@ public class SamplePlayer : MonoBehaviour
     //private Vector3 position = new Vector3();
 
     private int remains;
+    //水たまりの処理に使う
+    private int phaseNum;
+    float Y;
+
+    //水たまりを貫通するかどうか？
+    bool isPuddlethrough;
+    //動かなくするかどうか？
+    bool isNotmove;
+    //水たまり落ちる？
+    bool isMovedown;
+
 
     // Start is called before the first frame update
     void Start()
     {
         isBoots = false;
+        isNotmove = false;
+        isPuddlethrough = false;
+        isMovedown = false;
+        
         //wind = wind.GetComponent<Wind>();
         Attackgage = Attackgage.GetComponent<attackgage>();
 
         STR = 5;
         weaponManager = GetComponent<WeaponManager>();
         playerObject = GameObject.Find("protoPlayer");
+        phaseNum = 0;
     }
 
     private void Awake()
@@ -48,22 +64,27 @@ public class SamplePlayer : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-        transform.Translate(
-            new Vector3(h, 0, v) * moveSpeeed * Time.deltaTime );
-        Vector3 angle = new Vector3(Input.GetAxis("Mouse X") * rotateSpeed, 0, 0);
-        Quaternion rot = Quaternion.Euler(0, angle.x, 0);
-        Quaternion q = transform.rotation;
-        transform.rotation = q * rot;
+        if (isNotmove == false)
+        {
+            transform.Translate(
+              new Vector3(h, 0, v) * moveSpeeed * Time.deltaTime);
+            Vector3 angle = new Vector3(Input.GetAxis("Mouse X") * rotateSpeed, 0, 0);
+            Quaternion rot = Quaternion.Euler(0, angle.x, 0);
+            Quaternion q = transform.rotation;
+            transform.rotation = q * rot;
+        }
 
         //長靴を取得した時、水たまりを通れるように変更
         if (isBoots == true)
         {
-            int playerCol = LayerMask.NameToLayer("Player");
-            int waterCol = LayerMask.NameToLayer("Water");
-            Physics.IgnoreLayerCollision(playerCol, waterCol);
+            Puddlethrough();
         }
         Attack();
 
+        if(isMovedown==true)
+        {
+            Movedown();
+        }
     }
 
     public Vector3 playerPosition()
@@ -85,12 +106,10 @@ public class SamplePlayer : MonoBehaviour
                     //プレイヤーのY座標を取得
                     float y = gameObject.transform.position.y;
 
-
                     //プレイヤー中心より下の位置で当たったかどうか。
                     if (contact.point.y > 0.7f)
                     {
-                        Vector3 transpoint = GameObject.Find("transpoint").transform.position;
-                        this.gameObject.transform.position = transpoint;
+                        isMovedown = true;
                     }
                 }
             }
@@ -115,6 +134,8 @@ public class SamplePlayer : MonoBehaviour
         //    }
         //}
 
+        
+
         if (collision.gameObject.tag == "water")
         {
             if (RainManager.rainLevel == 3)
@@ -131,8 +152,7 @@ public class SamplePlayer : MonoBehaviour
                     //プレイヤー中心より下の位置で当たったかどうか。
                     if (contact.point.y > 0.7f)
                     {
-                        Vector3 transpoint = GameObject.Find("transpoint").transform.position;
-                        this.gameObject.transform.position = transpoint;
+                        isMovedown = true;
                     }
                 }
             }
@@ -215,6 +235,50 @@ public class SamplePlayer : MonoBehaviour
 
             }
 
+        }
+    }
+
+    private void Puddlethrough()
+    {
+          int playerCol = LayerMask.NameToLayer("Player");
+          int waterCol = LayerMask.NameToLayer("Water");
+          Physics.IgnoreLayerCollision(playerCol, waterCol);
+        
+    }
+
+    private void Movedown()
+    {
+        switch (phaseNum)
+        {
+            case 0:
+                Y = 0;
+                phaseNum += 1;
+                break;
+
+            case 1:
+                //プレイヤーの移動制限
+                rb = GetComponent<Rigidbody>();
+                rb.isKinematic = true;
+                isNotmove = true;
+
+                transform.Translate(0, Y, 0);
+                Y -= 0.001f;
+
+                if (this.gameObject.transform.position.y<=-0.7f)
+                {
+                    phaseNum += 1;
+                }
+                break;
+
+            case 2:
+                Vector3 transpoint = GameObject.Find("transpoint").transform.position;
+                this.gameObject.transform.position = transpoint;
+                phaseNum = 0;
+                rb.GetComponent<Rigidbody>();
+                rb.isKinematic = false;
+                isNotmove = false;
+                isMovedown = false;
+                break;
         }
     }
 
