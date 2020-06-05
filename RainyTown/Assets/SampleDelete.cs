@@ -40,6 +40,7 @@ public class SampleDelete : MonoBehaviour
         if (remains <= 0)
         {
             Fadeout.SetActive(true);
+            RainUIManager.isStart = false;
         }
        
            // Destroy(gameObject);

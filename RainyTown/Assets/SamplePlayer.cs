@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SamplePlayer : MonoBehaviour
 {
@@ -10,8 +11,6 @@ public class SamplePlayer : MonoBehaviour
     public bool isAttack;
     public bool isHitAttack;
     Vector3 pos;
-    public Wind wind;
-    public attackgage Attackgage;
     public Transform parent;
     public float STR;
     public float rotateSpeed = 4.0f;
@@ -24,11 +23,24 @@ public class SamplePlayer : MonoBehaviour
     //private Vector3 position = new Vector3();
 
     private int remains;
+    float Y;
+    //switchで使う
+    private int phaseNum;
+    //プレイヤーを動けなくするか？
+    bool isNotmove;
+    bool isMovedown;
+    Rigidbody rb;
+
+    //マンホールテキスト
+    public Text manholeText2;
+    public Text manholeText3;
 
     // Start is called before the first frame update
     void Start()
     {
         isBoots = false;
+        isNotmove = false;
+        isMovedown = false;
         //wind = wind.GetComponent<Wind>();
        
 
@@ -50,21 +62,20 @@ public class SamplePlayer : MonoBehaviour
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
 
-            transform.Translate(
-                new Vector3(h, 0, v) * moveSpeeed * Time.deltaTime);
-            Vector3 angle = new Vector3(Input.GetAxis("Mouse X") * rotateSpeed, 0, 0);
-            Quaternion rot = Quaternion.Euler(0, angle.x, 0);
-            Quaternion q = transform.rotation;
-            transform.rotation = q * rot;
-
-            //長靴を取得した時、水たまりを通れるように変更
-            if (isBoots == true)
+            if (isNotmove == false)
             {
-                int playerCol = LayerMask.NameToLayer("Player");
-                int waterCol = LayerMask.NameToLayer("Water");
-                Physics.IgnoreLayerCollision(playerCol, waterCol);
+                transform.Translate(
+                    new Vector3(h, 0, v) * moveSpeeed * Time.deltaTime);
+                Vector3 angle = new Vector3(Input.GetAxis("Mouse X") * rotateSpeed, 0, 0);
+                Quaternion rot = Quaternion.Euler(0, angle.x, 0);
+                Quaternion q = transform.rotation;
+                transform.rotation = q * rot;
             }
 
+            if(isMovedown==true)
+            {
+                Movedown();
+            }
         }
     }
 
@@ -91,8 +102,7 @@ public class SamplePlayer : MonoBehaviour
                     //プレイヤー中心より下の位置で当たったかどうか。
                     if (contact.point.y > 0.7f)
                     {
-                        Vector3 transpoint = GameObject.Find("transpoint").transform.position;
-                        this.gameObject.transform.position = transpoint;
+                        isMovedown = true;
                     }
                 }
             }
@@ -119,8 +129,7 @@ public class SamplePlayer : MonoBehaviour
                     //プレイヤー中心より下の位置で当たったかどうか。
                     if (contact.point.y > 0.7f)
                     {
-                        Vector3 transpoint = GameObject.Find("transpoint").transform.position;
-                        this.gameObject.transform.position = transpoint;
+                        isMovedown = true;
                     }
                 }
             }
@@ -133,6 +142,9 @@ public class SamplePlayer : MonoBehaviour
             {
                 Vector3 undergroundpoint = GameObject.Find("undergroundpoint").transform.position;
                 this.gameObject.transform.position = undergroundpoint;
+                Vector3 ManholeExit = GameObject.Find("ManholeExit").transform.position;
+                transform.LookAt(ManholeExit);
+                manholeText2.gameObject.SetActive(true);
             }
         }
     }
@@ -147,39 +159,79 @@ public class SamplePlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        //長靴を取得
-        if (col.gameObject.tag == "Boots")
-        {
-            isBoots = true;
-        }
+        
+    }
 
-
+    private void OnTriggerStay(Collider col)
+    {
         //地下出口
-        if(col.gameObject.tag=="ManholeExit")
+        if (col.gameObject.tag == "ManholeExit")
         {
+            manholeText3.gameObject.SetActive(true);
+
             int M = Random.Range(0, 4);
-            if(M==0)
+            if (Input.GetKeyDown(KeyCode.Q))
             {
-                Vector3 Manhole = GameObject.Find("Manhole").transform.position;
-                this.gameObject.transform.position = Manhole;
+                if (M == 0)
+                {
+                    Vector3 Manhole = GameObject.Find("Manhole").transform.position;
+                    this.gameObject.transform.position = Manhole;
+                }
+                if (M == 1)
+                {
+                    Vector3 Manhole = GameObject.Find("Manhole1").transform.position;
+                    this.gameObject.transform.position = Manhole;
+                }
+                if (M == 2)
+                {
+                    Vector3 Manhole = GameObject.Find("Manhole2").transform.position;
+                    this.gameObject.transform.position = Manhole;
+                }
+                if (M == 3)
+                {
+                    Vector3 Manhole = GameObject.Find("Manhole3").transform.position;
+                    this.gameObject.transform.position = Manhole;
+                }
+
+                manholeText3.gameObject.SetActive(false);
             }
-            if(M==1)
-            {
-                Vector3 Manhole = GameObject.Find("Manhole1").transform.position;
-                this.gameObject.transform.position = Manhole;
-            }
-            if (M == 2)
-            {
-                Vector3 Manhole = GameObject.Find("Manhole2").transform.position;
-                this.gameObject.transform.position = Manhole;
-            }
-            if (M == 3)
-            {
-                Vector3 Manhole = GameObject.Find("Manhole3").transform.position;
-                this.gameObject.transform.position = Manhole;
-            }
+
+            manholeText2.gameObject.SetActive(false);
         }
     }
-   
+
+    //水たまり上の処理
+    private void Movedown()
+    {
+        switch(phaseNum)
+        {
+            case 0:
+                Y = 0;
+                phaseNum += 1;
+                break;
+
+            case 1:
+                rb = GetComponent<Rigidbody>();
+                rb.isKinematic = true;
+                isNotmove = true;
+                transform.Translate(0, Y, 0);
+                Y -= 0.001f;
+                if(this.gameObject.transform.position.y<=0.2f)
+                {
+                    phaseNum += 1;
+                }
+                break;
+
+            case 2:
+                Vector3 transpoint = GameObject.Find("transpoint").transform.position;
+                this.gameObject.transform.position = transpoint;
+                rb.GetComponent<Rigidbody>();
+                rb.isKinematic = false;
+                isNotmove = false;
+                isMovedown = false;
+                phaseNum = 0;
+                break;
+        }
+    }
 
 }
