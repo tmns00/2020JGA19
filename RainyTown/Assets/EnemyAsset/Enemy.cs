@@ -53,6 +53,7 @@ public class Enemy : MonoBehaviour
             isDeadFlag = true;
        
         vec = player.transform.position - body.transform.position;
+        //body.transform.rotation = Quaternion.Euler(0, Vector3.Angle(transform.up, vec), 0);
 
         if (searce.GetTrackFlag() && !attackAI.isAttack)
             Tracking();

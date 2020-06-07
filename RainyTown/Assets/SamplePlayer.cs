@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SamplePlayer : MonoBehaviour
 {
@@ -29,6 +30,10 @@ public class SamplePlayer : MonoBehaviour
     bool isNotmove;
     bool isMovedown;
     Rigidbody rb;
+
+    //マンホールテキスト
+    public Text manholeText2;
+    public Text manholeText3;
 
     // Start is called before the first frame update
     void Start()
@@ -137,6 +142,9 @@ public class SamplePlayer : MonoBehaviour
             {
                 Vector3 undergroundpoint = GameObject.Find("undergroundpoint").transform.position;
                 this.gameObject.transform.position = undergroundpoint;
+                Vector3 ManholeExit = GameObject.Find("ManholeExit").transform.position;
+                transform.LookAt(ManholeExit);
+                manholeText2.gameObject.SetActive(true);
             }
         }
     }
@@ -151,30 +159,45 @@ public class SamplePlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
+        
+    }
+
+    private void OnTriggerStay(Collider col)
+    {
         //地下出口
-        if(col.gameObject.tag=="ManholeExit")
+        if (col.gameObject.tag == "ManholeExit")
         {
+            manholeText3.gameObject.SetActive(true);
+
             int M = Random.Range(0, 4);
-            if(M==0)
-            {
-                Vector3 Manhole = GameObject.Find("Manhole").transform.position;
-                this.gameObject.transform.position = Manhole;
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {                            
+                if (M == 0)
+                {
+                    Vector3 Manhole = GameObject.Find("Manhole").transform.position;
+                    this.gameObject.transform.position = Manhole;
+                }
+                if (M == 1)
+                {
+                    Vector3 Manhole = GameObject.Find("Manhole1").transform.position;
+                    this.gameObject.transform.position = Manhole;
+                }
+                if (M == 2)
+                {
+                    Vector3 Manhole = GameObject.Find("Manhole2").transform.position;
+                    this.gameObject.transform.position = Manhole;
+                }
+                if (M == 3)
+                {
+                    Vector3 Manhole = GameObject.Find("Manhole3").transform.position;
+                    this.gameObject.transform.position = Manhole;
+                }
+
+                manholeText3.gameObject.SetActive(false);
             }
-            if(M==1)
-            {
-                Vector3 Manhole = GameObject.Find("Manhole1").transform.position;
-                this.gameObject.transform.position = Manhole;
-            }
-            if (M == 2)
-            {
-                Vector3 Manhole = GameObject.Find("Manhole2").transform.position;
-                this.gameObject.transform.position = Manhole;
-            }
-            if (M == 3)
-            {
-                Vector3 Manhole = GameObject.Find("Manhole3").transform.position;
-                this.gameObject.transform.position = Manhole;
-            }
+
+            manholeText2.gameObject.SetActive(false);
         }
     }
 
