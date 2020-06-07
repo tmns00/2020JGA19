@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -250,6 +250,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 51039630}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &51051079 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5516304593978742751, guid: 62ef3b99dbb4a8f44bc64296b2a6a363,
+    type: 3}
+  m_PrefabInstance: {fileID: 239429493}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &57996435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1240,7 +1252,7 @@ PrefabInstance:
         type: 3}
       propertyPath: manholeText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 51051079}
     - target: {fileID: 5156563248690880645, guid: 881b13b1aa63a2c49a3c31739deb4f57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2343,7 +2355,7 @@ PrefabInstance:
         type: 3}
       propertyPath: manholeText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 51051079}
     - target: {fileID: 5156563248690880645, guid: 881b13b1aa63a2c49a3c31739deb4f57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2485,6 +2497,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6233561629601858381, guid: 5d03c913da8786445b5714216ba567fa,
     type: 3}
   m_PrefabInstance: {fileID: 500185398}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &507380623 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5516304594404922489, guid: 62ef3b99dbb4a8f44bc64296b2a6a363,
+    type: 3}
+  m_PrefabInstance: {fileID: 239429493}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &512220182 stripped
 Transform:
@@ -3376,6 +3394,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 666373529}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &668851892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 668851893}
+  - component: {fileID: 668851895}
+  - component: {fileID: 668851894}
+  m_Layer: 5
+  m_Name: ManholeText3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &668851893
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668851892}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 507380623}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 29, y: 115}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &668851894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668851892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.98039216, g: 0.98039216, b: 0, a: 0.98039216}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u5730\u4E0A\u306B\u51FA\u308B\u2192Q\u30AD\u30FC"
+--- !u!222 &668851895
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668851892}
+  m_CullTransparentMesh: 0
 --- !u!43 &691379477
 Mesh:
   m_ObjectHideFlags: 0
@@ -5469,6 +5564,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1072516199}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1080767495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080767496}
+  - component: {fileID: 1080767498}
+  - component: {fileID: 1080767497}
+  m_Layer: 5
+  m_Name: ManholeText2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1080767496
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080767495}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 507380623}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 63.9, y: 114.4}
+  m_SizeDelta: {x: 250, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1080767497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080767495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u30E9\u30F3\u30C0\u30E0\u306A\u30DE\u30F3\u30DB\u30FC\u30EB\u306B\u79FB\u52D5\u53EF\u80FD\n\u3000\u3000\u3000\u3000\u524D\u306B\u9032\u3093\u3067\uFF01"
+--- !u!222 &1080767498
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080767495}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1084862854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7875,7 +8047,7 @@ PrefabInstance:
         type: 3}
       propertyPath: manholeText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 51051079}
     - target: {fileID: 5156563248690880645, guid: 881b13b1aa63a2c49a3c31739deb4f57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8817,7 +8989,7 @@ PrefabInstance:
         type: 3}
       propertyPath: manholeText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 51051079}
     - target: {fileID: 5156563248690880645, guid: 881b13b1aa63a2c49a3c31739deb4f57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9750,6 +9922,7 @@ Transform:
   - {fileID: 1800066571}
   - {fileID: 272599606}
   - {fileID: 1305347659}
+  - {fileID: 370538338}
   - {fileID: 1601317643}
   - {fileID: 512220182}
   - {fileID: 1705294551}
@@ -9761,7 +9934,6 @@ Transform:
   - {fileID: 1461261261}
   - {fileID: 182332833}
   - {fileID: 1979104344}
-  - {fileID: 370538338}
   - {fileID: 1339050247}
   - {fileID: 1234836738}
   - {fileID: 802915042}
@@ -9908,6 +10080,16 @@ PrefabInstance:
       propertyPath: rotateSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6442631339275233292, guid: b99eecb1369aee249ba7c75f34e4a1b2,
+        type: 3}
+      propertyPath: manholeText2
+      value: 
+      objectReference: {fileID: 1080767497}
+    - target: {fileID: 6442631339275233292, guid: b99eecb1369aee249ba7c75f34e4a1b2,
+        type: 3}
+      propertyPath: manholeText3
+      value: 
+      objectReference: {fileID: 668851894}
     - target: {fileID: 6442631339275233293, guid: b99eecb1369aee249ba7c75f34e4a1b2,
         type: 3}
       propertyPath: m_Constraints

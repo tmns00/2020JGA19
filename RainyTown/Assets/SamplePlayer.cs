@@ -170,8 +170,9 @@ public class SamplePlayer : MonoBehaviour
             manholeText3.gameObject.SetActive(true);
 
             int M = Random.Range(0, 4);
+
             if (Input.GetKeyDown(KeyCode.Q))
-            {
+            {                            
                 if (M == 0)
                 {
                     Vector3 Manhole = GameObject.Find("Manhole").transform.position;
