@@ -24,6 +24,8 @@ public class Enemy : MonoBehaviour
 
     private float HP = 15.0f;
     private bool isDeadFlag;
+
+    public AudioSource audioSource;
  
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,7 @@ public class Enemy : MonoBehaviour
         isDeadFlag = false;
 
         attackAI = body.GetComponent<EnemyAttackAI>();
+        //audioSource = GetComponent<AudioSource>();
     }
 
     private void Awake()
@@ -56,7 +59,12 @@ public class Enemy : MonoBehaviour
         //body.transform.rotation = Quaternion.Euler(0, Vector3.Angle(transform.up, vec), 0);
 
         if (searce.GetTrackFlag() && !attackAI.isAttack)
+        {
             Tracking();
+            audioSource.Play();
+        }
+
+        audioSource.Stop();
 
         Debug.Log(searce.GetTrackFlag());
 
