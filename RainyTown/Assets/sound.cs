@@ -5,33 +5,32 @@ using UnityEngine;
 public class sound : MonoBehaviour
 {
 
-    public AudioSource audioSource;
+    private AudioSource audioSource;
+
+    public AudioClip[] bgms;
+
+    private float preRain;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
+        preRain = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (RainManager.rainLevel == 1)
-        {
-            GameObject srain = transform.Find("BGMs").gameObject;
-            audioSource = srain.GetComponent<AudioSource>();
-            audioSource.Play();
-        }
-        else if (RainManager.rainLevel == 2)
-        {
-            GameObject mrain = transform.Find("BGMm").gameObject;
-            audioSource = mrain.GetComponent<AudioSource>();
-            audioSource.Play();
-        }
-        else if (RainManager.rainLevel == 3)
-        {
-            GameObject brain = transform.Find("BGMb").gameObject;
-            audioSource = brain.GetComponent<AudioSource>();
-            audioSource.Play();
-        }
+        if (RainManager.rainLevel != preRain)
+            PlayBGM();
+
+        preRain = RainManager.rainLevel;
+    }
+
+    void PlayBGM()
+    {
+        audioSource.Stop();
+        audioSource.clip = bgms[(int)RainManager.rainLevel - 1];
+        audioSource.Play();
     }
 }
