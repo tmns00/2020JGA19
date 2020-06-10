@@ -80,7 +80,7 @@ public class TuyoEnemy : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.tag == "Player" /*|| hit.collider.tag == "Wall" || hit.collider.tag == "Untagged" || hit.collider.tag == "Item"*/)
+            if (hit.collider.tag == "Player")
             {
                 isTracking = true;
                 velocity = vec.normalized;
