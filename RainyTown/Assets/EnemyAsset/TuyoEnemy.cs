@@ -24,12 +24,17 @@ public class TuyoEnemy : MonoBehaviour
     [SerializeField]
     private EnemyAttackAI attackAI;
 
+    private AudioSource audioSource;
+    private bool once;
+
     // Start is called before the first frame update
     void Start()
     {
         isTracking = false;
         attackAI = body.GetComponent<EnemyAttackAI>();
 
+        audioSource = GetComponent<AudioSource>();
+        once = true;
     }
 
     private void Awake()
@@ -63,6 +68,14 @@ public class TuyoEnemy : MonoBehaviour
         if (attackAI.isAttack)
         {
             body.transform.Translate(Vector3.zero);
+            audioSource.Stop();
+            once = true;
+        }
+
+        if (!search.GetTrackFlag())
+        {
+            audioSource.Stop();
+            once = true;
         }
     }
 
@@ -86,11 +99,14 @@ public class TuyoEnemy : MonoBehaviour
                 velocity = vec.normalized;
                 body.transform.Translate(
                     new Vector3(velocity.x, 0, velocity.z) * moveSpeed * Time.deltaTime);
+                PlayBGM();
             }
             else if (hit.collider.tag == "RestPoint")
             {
                 isTracking = false;
                 body.transform.Translate(Vector3.zero);
+                audioSource.Stop();
+                once = true;
             }
 
             return;
@@ -101,5 +117,14 @@ public class TuyoEnemy : MonoBehaviour
     {
         if (RainManager.rainLevel == 1)
             Delete();
+    }
+
+    private void PlayBGM()
+    {
+        if (once)
+        {
+            audioSource.Play();
+            once = false;
+        }
     }
 }
