@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 123
+  controlID: 57
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 62
+  controlID: 58
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 63
+  controlID: 59
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -382,9 +382,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: dcfbffff
+      m_SelectedIDs: dec4ffff
+      m_LastClickedID: -15138
+      m_ExpandedIDs: ecc4ffff62c6ffff103a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -439,9 +439,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 520.19714, y: 267.96524, z: 0}
+    m_Target: {x: 403.13513, y: 229.17726, z: -63.340668}
     speed: 2
-    m_Value: {x: 520.19714, y: 267.96524, z: 0}
+    m_Value: {x: 403.13513, y: 229.17726, z: -63.340668}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -469,13 +469,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.1966199, y: 0.24198239, z: -0.05007496, w: -0.94882965}
+    m_Target: {x: -0.23600566, y: 0.06622459, z: -0.01605538, w: -0.9693595}
     speed: 2
-    m_Value: {x: -0.1966199, y: 0.24198239, z: -0.05007496, w: -0.94882965}
+    m_Value: {x: -0.23600566, y: 0.06622459, z: -0.01605538, w: -0.9693595}
   m_Size:
-    m_Target: 22
+    m_Target: 415.55734
     speed: 2
-    m_Value: 22
+    m_Value: 415.55734
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -551,20 +551,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - "Assets/Resources/\u96E8\u97F3"
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 87
   m_LastFolders:
-  - "Assets/Resources/\u96E8\u97F3"
+  - Assets
   m_LastFoldersGridSize: 87
-  m_LastProjectPath: D:\2020JGA19\RainyTown
+  m_LastProjectPath: C:\Users\K018A2142\Desktop\teampro\RainyTown
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 66}
-    m_SelectedIDs: f60c0000
-    m_LastClickedID: 3318
-    m_ExpandedIDs: 00000000ee0c0000fe0d000000ca9a3b
+    m_SelectedIDs: 54320000
+    m_LastClickedID: 12884
+    m_ExpandedIDs: 00000000543200005633000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -592,7 +592,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ee0c0000fe0d0000
+    m_ExpandedIDs: 000000005432000056330000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -644,7 +644,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 576}
     m_GridSize: 87
   m_DirectoriesAreaWidth: 133
 --- !u!114 &17
