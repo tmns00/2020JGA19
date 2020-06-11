@@ -25,7 +25,9 @@ public class Enemy : MonoBehaviour
     private float HP = 15.0f;
     private bool isDeadFlag;
 
-    public AudioSource audioSource;
+    private AudioSource audioSource;
+
+    private bool once;
  
     // Start is called before the first frame update
     void Start()
@@ -38,7 +40,8 @@ public class Enemy : MonoBehaviour
         isDeadFlag = false;
 
         attackAI = body.GetComponent<EnemyAttackAI>();
-        //audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        once = true;
     }
 
     private void Awake()
@@ -61,18 +64,22 @@ public class Enemy : MonoBehaviour
         if (searce.GetTrackFlag() && !attackAI.isAttack)
         {
             Tracking();
-            audioSource.Play();
         }
-
-        audioSource.Stop();
 
         Debug.Log(searce.GetTrackFlag());
 
         if (attackAI.isAttack)
         {
             body.transform.Translate(Vector3.zero);
+            audioSource.Stop();
+            once = true;
         }
 
+        if(!searce.GetTrackFlag())
+        {
+            audioSource.Stop();
+            once = true;
+        }
         //Debug.Log(player.transform.position);
         //Debug.Log(transform.position);
     }
@@ -101,15 +108,18 @@ public class Enemy : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.tag == "Player" || hit.collider.tag == "Wall" || hit.collider.tag == "Untagged" || hit.collider.tag == "Item")
+            if (hit.collider.tag == "Player" || hit.collider.tag == "Untagged" || hit.collider.tag == "Item")
             {
                 velocity = vec.normalized;
                 body.transform.Translate(
                     new Vector3(velocity.x, 0, velocity.z) * moveSpeed * Time.deltaTime);
+                PlayBGM();
             }
             else if (hit.collider.tag == "RestPoint")
             {
                 body.transform.Translate(Vector3.zero);
+                audioSource.Stop();
+                once = true;
             }
 
             Debug.Log(hit.collider.tag);
@@ -149,6 +159,15 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Muddy")
         {
             moveSpeed = 4.5f;
+        }
+    }
+
+    private void PlayBGM()
+    {
+        if (once)
+        {
+            audioSource.Play();
+            once = false;
         }
     }
 }

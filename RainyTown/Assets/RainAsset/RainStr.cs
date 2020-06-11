@@ -9,7 +9,7 @@ public class RainStr : MonoBehaviour
     [SerializeField]
     private List<ParticleSystem> effectobj;
     //時間
-    float istime = 0;
+    public static float istime = 0;
     public static float nextrain=0;
     float number=0;
     bool israin=true;
