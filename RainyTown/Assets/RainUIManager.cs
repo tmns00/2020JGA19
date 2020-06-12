@@ -7,6 +7,14 @@ public class RainUIManager : MonoBehaviour
     [SerializeField]
     GameObject rain;
     [SerializeField]
+    GameObject remain;
+    [SerializeField]
+    GameObject remainUi;
+    [SerializeField]
+    GameObject keys;
+    [SerializeField]
+    GameObject keysUI;
+    [SerializeField]
     GameObject telop;
     [SerializeField]
     GameObject title;
@@ -35,6 +43,10 @@ public class RainUIManager : MonoBehaviour
         if (!isActive)
         {
             rain.SetActive(false);
+            remain.SetActive(false);
+            remainUi.SetActive(false);
+            keys.SetActive(false);
+            keysUI.SetActive(false);
             telop.SetActive(false);
             title.SetActive(true);
         }
@@ -54,6 +66,10 @@ public class RainUIManager : MonoBehaviour
                 isStart = true;
                 telop.SetActive(false);
                 rain.SetActive(true);
+                remain.SetActive(true);
+                remainUi.SetActive(true);
+                keys.SetActive(true);
+                keysUI.SetActive(true);
             }
         }
       

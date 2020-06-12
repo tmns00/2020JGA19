@@ -108,7 +108,7 @@ public class Enemy : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.tag == "Player" || hit.collider.tag == "Untagged" || hit.collider.tag == "Item")
+            if (hit.collider.tag == "Player")
             {
                 velocity = vec.normalized;
                 body.transform.Translate(

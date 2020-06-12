@@ -31,16 +31,16 @@ public class SampleDelete : MonoBehaviour
 
     private void Awake()
     {
-        remains = 3;
+        remains = 5;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (remains <= 0)
-        {
-            Fadeout.SetActive(true);
+        {            
             RainUIManager.isStart = false;
+            Fadeout.SetActive(true);
         }
        
            // Destroy(gameObject);
