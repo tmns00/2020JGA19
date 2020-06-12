@@ -26,9 +26,11 @@ public class SamplePlayer : MonoBehaviour
     float Y;
     //switchで使う
     private int phaseNum;
+    private int phasehole;
     //プレイヤーを動けなくするか？
     bool isNotmove;
     bool isMovedown;
+    bool isMovehole;
     Rigidbody rb;
 
     //マンホールテキスト
@@ -41,6 +43,7 @@ public class SamplePlayer : MonoBehaviour
         isBoots = false;
         isNotmove = false;
         isMovedown = false;
+        isMovehole = false;
         //wind = wind.GetComponent<Wind>();
        
 
@@ -107,6 +110,13 @@ public class SamplePlayer : MonoBehaviour
                 }
             }
         }
+
+        if(collision.gameObject.tag=="under")
+        {
+            Vector3 ManholeExit = GameObject.Find("ManholeExit").transform.position;
+            transform.LookAt(ManholeExit);
+            isNotmove = false;
+        }
     }
 
     private void OnCollisionStay(Collision collision)
@@ -138,14 +148,14 @@ public class SamplePlayer : MonoBehaviour
         //マンホールにのっている時
         if(collision.gameObject.tag=="Manhole")
         {
-            if(Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 Vector3 undergroundpoint = GameObject.Find("undergroundpoint").transform.position;
                 this.gameObject.transform.position = undergroundpoint;
-                Vector3 ManholeExit = GameObject.Find("ManholeExit").transform.position;
-                transform.LookAt(ManholeExit);
                 manholeText2.gameObject.SetActive(true);
+                isNotmove = true;
             }
+            //isMovehole = true;
         }
     }
 
@@ -159,7 +169,7 @@ public class SamplePlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        
+      
     }
 
     private void OnTriggerStay(Collider col)
@@ -169,10 +179,11 @@ public class SamplePlayer : MonoBehaviour
         {
             manholeText3.gameObject.SetActive(true);
 
-            int M = Random.Range(0, 4);
+            
 
             if (Input.GetKeyDown(KeyCode.Q))
-            {                            
+            {
+                int M = Random.Range(0, 4);
                 if (M == 0)
                 {
                     Vector3 Manhole = GameObject.Find("Manhole").transform.position;
