@@ -54,7 +54,7 @@ public class SamplePlayer : MonoBehaviour
 
     private void Awake()
     {
-        remains = 3;
+        remains = 5;
     }
 
     // Update is called once per frame

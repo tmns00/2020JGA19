@@ -39,7 +39,7 @@ public class TuyoEnemy : MonoBehaviour
 
     private void Awake()
     {
-        moveSpeed = 5.0f;
+        moveSpeed = 4.0f;
     }
 
     // Update is called once per frame
