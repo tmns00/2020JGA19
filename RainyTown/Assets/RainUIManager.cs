@@ -21,7 +21,7 @@ public class RainUIManager : MonoBehaviour
     public Text space;
     bool isActive=false;
     bool istelop = false;
-    public static bool isStart=false;
+    public static bool isStart/*=false*/;
     bool isalpha=false;
     float alpha=1;
     float time;
@@ -29,7 +29,7 @@ public class RainUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        isStart = false;
     }
 
     // Update is called once per frame
