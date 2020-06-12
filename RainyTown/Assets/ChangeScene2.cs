@@ -16,7 +16,7 @@ public class ChangeScene2 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("ProtoStart");
+            SceneManager.LoadScene("ProtoStage");
         }
     }
 }
