@@ -30,12 +30,12 @@ public class ToBossScene : MonoBehaviour
     {
         //if (ItemManager.isComplete || other.gameObject.tag == "Player")
         //    SceneManager.LoadScene("ProtoBoss");
-        if (ItemManager.isComplete)
+        if (ItemManager.isComplete && other.gameObject.tag == "Player")
         {
             //clearText.text = "CLEAR";
             SceneManager.LoadScene("ProtoClear");
         }            
-        if (!ItemManager.isComplete && !flag)
+        if (!ItemManager.isComplete && !flag && other.gameObject.tag == "Player")
         {
             flag = true;
             clearText.text = "鍵が足りないようだ…";         
