@@ -115,6 +115,7 @@ public class SamplePlayer : MonoBehaviour
         {
             Vector3 ManholeExit = GameObject.Find("ManholeExit").transform.position;
             transform.LookAt(ManholeExit);
+            isNotmove = false;
         }
     }
 
@@ -152,6 +153,7 @@ public class SamplePlayer : MonoBehaviour
                 Vector3 undergroundpoint = GameObject.Find("undergroundpoint").transform.position;
                 this.gameObject.transform.position = undergroundpoint;
                 manholeText2.gameObject.SetActive(true);
+                isNotmove = true;
             }
             //isMovehole = true;
         }
