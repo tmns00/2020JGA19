@@ -7,7 +7,7 @@ public class SetWindowSize : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Screen.SetResolution(1600, 900, false, 30);
+        Screen.SetResolution(1920, 1080, false, 30);
     }
 
 }
